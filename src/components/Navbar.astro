@@ -1,6 +1,94 @@
-<div>
-    <div>
-        <img src="" alt="">
-    </div>
-    <div></div>
-</div>
+<header
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+>
+  <div class="flex sm:justify-center justify-between items-center px-6 py-4 md:px-16 gap-x-80">
+    <!-- Logo -->
+    <a href="#">
+      <img
+        id="logo"
+        src="/logo-agil3-1.svg"
+        alt="Logo Agil3"
+        class="h-10 transition-all duration-300"
+      />
+    </a>
+
+    <!-- Botón menú hamburguesa (solo visible en móvil) -->
+    <button
+      id="menu-toggle"
+      class="md:hidden focus:outline-none"
+      aria-label="Abrir menú"
+    >
+      <!-- Icono hamburguesa -->
+      <svg
+        id="menu-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8 text-white transition-all duration-300"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menú principal -->
+    <nav
+      id="nav-menu"
+      class="hidden md:flex gap-x-12 text-white font-medium transition-all duration-300"
+    >
+      <a href="#">Soluciones</a>
+      <a href="#">Integraciones</a>
+      <a href="#">Casos de éxito</a>
+      <a href="#">Contáctenos</a>
+    </nav>
+  </div>
+
+  <!-- Menú desplegable móvil -->
+  <div
+    id="mobile-menu"
+    class="hidden flex-col items-center bg-white text-black py-6 space-y-4 md:hidden shadow-md transition-all duration-300"
+  >
+    <a href="#">Soluciones</a>
+    <a href="#">Integraciones</a>
+    <a href="#">Casos de éxito</a>
+    <a href="#">Contáctenos</a>
+  </div>
+</header>
+
+
+
+<script>
+  const navbar = document.getElementById("navbar");
+  const logo = document.getElementById("logo");
+  const navMenu = document.getElementById("nav-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+
+  // Efecto al hacer scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("bg-white", "shadow-md");
+      navMenu.classList.remove("text-white");
+      navMenu.classList.add("text-black");
+      menuIcon.classList.remove("text-white");
+      menuIcon.classList.add("text-black");
+      logo.src = "/logo-agil3-2.svg";
+    } else {
+      navbar.classList.remove("bg-white", "shadow-md");
+      navMenu.classList.remove("text-black");
+      navMenu.classList.add("text-white");
+      menuIcon.classList.remove("text-black");
+      menuIcon.classList.add("text-white");
+      logo.src = "/logo-agil3-1.svg";
+    }
+  });
+
+  // Lógica del menú hamburguesa
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+  });
+</script>
