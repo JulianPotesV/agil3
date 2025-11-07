@@ -1,1 +1,13 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Outfit', sans-serif;
+}
+
+:root {
+	--naranja: #FF6800;
+    --gris: #333333;
+    --gris-claro: #717171;
+}
