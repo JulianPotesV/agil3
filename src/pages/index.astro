@@ -22,16 +22,17 @@ import "../styles/global.css";
 	</div>
 
   <!-- Curva inferior -->
-  <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320">
-    <path fill="#ffffff" fill-opacity="1" d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+  	<svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320">
+    	<path fill="#ffffff" fill-opacity="1" d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+	</svg>
 
 </section>
 	
 <section>
-	<h2 class="text-grisclaro text-6xl font-medium text-center">
+	<h2 class="text-grisclaro sm:text-5xl text-3xl font-medium text-center">
 		¿Listo para <span class="text-naranja">transformar</span> su empresa?
 	</h2>
-	<p class="text-grisclaro text-2xl text-center mt-4">En <span class="font-bold">
+	<p class="text-grisclaro sm:text-2xl text-base text-center mt-4">En <span class="font-bold">
 		Agil3</span> lo ayudamos a hacerlo realidad con tecnología y estrategia.
 	</p>
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
@@ -39,60 +40,88 @@ import "../styles/global.css";
 	</svg>
 </section>
 
-<section class="flex justify-between px-80 bg-[#F5F5F5]">
+<!-- Sección de servicios -->
 
-	<div class="text-grisclaro flex flex-col items-center justify-center px-20 gap-4">
-		<img src="/icono-bot.svg" alt="Icono whatsapp bot">
-		<div class="text-center flex flex-col gap-4">
-			<h3 class="text-2xl font-semibold ">WhatsApp Bot</h3>
-			<p>Ahorre tiempo en la atención al cliente y optimice los recursos de su empresa con nuestro Robot para WhatsApp.</p>
-			<a href="#" class="text-naranja">Ver más ></a>
-		</div>
-	</div>
+<section class="bg-[#F5F5F5] px-6 md:px-20 lg:px-40 xl:px-80">
+  <div class="grid gap-12 md:gap-16 lg:gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-grisclaro">
+    
+    <!-- Tarjeta 1 -->
+    <div class="flex flex-col items-center justify-center text-center gap-4 px-4">
+      <img src="/icono-bot.svg" alt="Icono WhatsApp Bot" class="w-20 h-20" />
+      <h3 class="text-2xl font-semibold">WhatsApp Bot</h3>
+      <p>
+        Ahorre tiempo en la atención al cliente y optimice los recursos de su empresa con nuestro Robot para WhatsApp.
+      </p>
+      <a href="#" class="text-naranja font-medium hover:underline">Ver más ></a>
+    </div>
 
-	<div class="text-grisclaro flex flex-col items-center justify-center px-20 gap-4">
-		<img src="/icono-integraciones.svg" alt="Icono integraciones">
-		<div class="text-center flex flex-col gap-4">
-			<h3 class="text-2xl font-semibold">Integraciones</h3>
-			<p>Pieza clave para automatizar y aumentar la productividad en los procesos de nuestros clientes.</p>
-			<a href="#" class="text-naranja">Ver más ></a>
-		</div>
-	</div>
+    <!-- Tarjeta 2 -->
+    <div class="flex flex-col items-center justify-center text-center gap-4 px-4">
+      <img src="/icono-integraciones.svg" alt="Icono Integraciones" class="w-20 h-20" />
+      <h3 class="text-2xl font-semibold">Integraciones</h3>
+      <p>
+        Pieza clave para automatizar y aumentar la productividad en los procesos de nuestros clientes.
+      </p>
+      <a href="#" class="text-naranja font-medium hover:underline">Ver más ></a>
+    </div>
 
-	<div class="text-grisclaro flex flex-col items-center justify-center px-20 gap-4">
-		<img src="/icono-soluciones.svg" alt="Icono soluciones corporativas">
-		<div class="text-center flex flex-col gap-4">
-			<h3 class="text-2xl font-semibold">Soluciones Corporativas</h3>
-			<p>Utilizamos la tecnología para aumentar la productividad de las empresas a través de soluciones de software.</p>
-			<a href="#" class="text-naranja">Ver más ></a>
-		</div>
-	</div>
+    <!-- Tarjeta 3 -->
+    <div class="flex flex-col items-center justify-center text-center gap-4 px-4">
+      <img src="/icono-soluciones.svg" alt="Icono Soluciones Corporativas" class="w-20 h-20" />
+      <h3 class="text-2xl font-semibold">Soluciones Corporativas</h3>
+      <p>
+        Utilizamos la tecnología para aumentar la productividad de las empresas a través de soluciones de software.
+      </p>
+      <a href="#" class="text-naranja font-medium hover:underline">Ver más ></a>
+    </div>
 
+  </div>
 </section>
 
-<section class="flex items-center justify-center gap-8">
+<!-- puntos decorativos -->
+<section class="flex items-center justify-center bg-[#F5F5F5]">
 		<img src="/puntos.svg" alt="puntos decorativos" class="my-32">
 </section>
 
-<section class="flex px-80">
-	<div>
-		<h2 class="text-6xl">Somos expertos en <br>múltiples arquitecturas</h2>
-		<p class="text-lg">Utilizamos las mejores tecnologías del mercado para crear aplicaciones
-			rápidas, seguras y flexibles. Desde interfaces modernas hasta bases de 
-			datos robustas, integramos cada componente para ofrecer soluciones digitales 
-			que impulsen el crecimiento de su empresa.</p>
-	</div>
-	<div class="flex">
-		<div>
-			<img src="oracle.svg" alt="Oracle">
-			<img src="postgres.svg" alt="PostgreSQL">
-			<img src="mysql.svg" alt="MySQL">
-		</div>
-		<div>
-			<img src="php.svg" alt="PHP">
-			<img src="puntonet.svg" alt=".NET">
-			<img src="vue.svg" alt="Vue.js">
-		</div>
-	</div>
+<!-- Sección arquitecturas -->
+<section class="bg-[#F5F5F5] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-28 px-8 md:px-16 lg:px-40 relative pb-60">
+
+  <!-- Texto -->
+  	<div class="border-l-4 border-naranja pl-6 md:w-1/2">
+		<h2 class="text-grisclaro sm:text-5xl text-3xl font-medium leading-tight">
+		Somos <span class="text-naranja">expertos</span><br>
+		en múltiples arquitecturas
+		</h2>
+		<p class="text-base md:text-lg text-grisclaro mt-6 max-w-xl">
+		Utilizamos las mejores tecnologías del mercado para crear aplicaciones
+		rápidas, seguras y flexibles. Desde interfaces modernas hasta bases de 
+		datos robustas, integramos cada componente para ofrecer soluciones digitales 
+		que impulsen el crecimiento de su empresa.
+		</p>
+  	</div>
+
+  <!-- Logos -->
+  	<div>
+   	 	<img src="/tecnologias.svg" alt="Tecnologías" class="hover:scale-110 transition-transform duration-300">
+  	</div>
+
+	<svg class="absolute bottom-0 top-60  left-0 w-full" viewBox="0 0 1440 255">
+    	<path fill="#FFD4B6" fill-opacity="1" d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+	</svg>
+
 </section>
+<section class=" bg-gradient-to-b from-[#FFD4B6] to-[#FFFFFF]">
+
+	<h2 class="text-grisclaro sm:text-5xl text-3xl font-medium text-center pt-16">
+		Lo que dicen <span class="text-naranja">nuestros</span> clientes
+	</h2>
+	<p class="text-grisclaro sm:text-2xl items-center justify-center text-center text-base mt-4 max-w-4xl mx-auto">
+		Nos enorgullece construir relaciones duraderas basadas en confianza, resultados y acompañamiento constante. Esto es lo que nuestros clientes piensan de trabajar con nosotros.
+	</p>
+</section>
+
+
+
 </Layout>
+
+
