@@ -1,0 +1,226 @@
+---
+
+---
+
+<!-- Swiper CSS desde CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section class="testimonials-section">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="/icono-comilla.svg" alt="Icono comilla">
+                    </div>
+                    <p class="quote">
+                        “Su equipo no solo desarrolló nuestra plataforma, sino que la llevó a otro nivel. La integración
+                        con nuestras APIs fue impecable y su soporte técnico, excepcional.”
+                    </p>
+                    <div class="author-info">
+                        <div class="avatar"></div>
+                        <div class="author-text">
+                            <p class="author-name">Felipe Duarte</p>
+                            <p class="author-company">| SmartChain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="/icono-comilla.svg" alt="Icono comilla">
+                    </div>
+                    <p class="quote">
+                        “Gracias al equipo, logramos optimizar nuestros procesos internos y reducir los tiempos de 
+                        desarrollo en más del 40%. Su enfoque técnico y compromiso marcaron la diferencia.”
+                    </p>
+                    <div class="author-info">
+                        <div class="avatar"></div>
+                        <div class="author-text">
+                            <p class="author-name">Laura Gómez</p>
+                            <p class="author-company">| InnovarTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <img src="/icono-comilla.svg" alt="Icono comilla">
+                    </div>
+                    <p class="quote">
+                        “Desde el primer día sentimos que trabajábamos con un equipo propio. Escuchan,
+                        entienden y aportan soluciones con verdadera pasión por la tecnología.”
+                    </p>
+                    <div class="author-info">
+                        <div class="avatar"></div>
+                        <div class="author-text">
+                            <p class="author-name">Andrés Mora</p>
+                            <p class="author-company">| MarketNow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Swiper JS desde CDN -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Inicialización del carrusel -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: false,
+      loopAdditionalSlides: 2,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: true, 
+        pauseOnMouseEnter: true,
+      },
+      speed: 600,
+      resistance: true,
+      resistanceRatio: 0.85,
+    });
+  });
+</script>
+
+<style>
+  .testimonials-section {
+    padding: 4rem 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 380px;
+    height: 420px;
+  }
+
+  .testimonial-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 60px rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+
+  .swiper-slide-active .testimonial-card {
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    box-shadow: 0 25px 70px rgba(255, 107, 53, 0.2);
+  }
+
+  .quote-icon {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    color: #e0e0e0;
+  }
+
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  }
+
+  .author-text {
+    flex: 1;
+  }
+
+  .author-name {
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+  }
+
+  .author-company {
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background-color: #cfcfcf !important; /* naranja vivo */
+    opacity: 0.5 !important;
+    width: 8px !important;
+    height: 8px !important;
+    transition: all 0.3s ease;
+}
+
+  :global(.swiper-pagination-bullet-active) {
+    background: #ff4400 !important;
+    opacity: 1;
+    width: 30px;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .swiper-slide {
+      width: 300px;
+      height: 400px;
+    }
+
+    .testimonial-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .quote {
+      font-size: 0.95rem;
+    }
+  }
+</style>
