@@ -3,81 +3,93 @@
 ---
 
 <!-- Swiper CSS desde CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
 <section class="testimonials-section">
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <img src="/icono-comilla.svg" alt="Icono comilla">
-                    </div>
-                    <p class="quote">
-                        “Su equipo no solo desarrolló nuestra plataforma, sino que la llevó a otro nivel. La integración
-                        con nuestras APIs fue impecable y su soporte técnico, excepcional.”
-                    </p>
-                    <div class="author-info">
-                        <div class="avatar"></div>
-                        <div class="author-text">
-                            <p class="author-name">Felipe Duarte</p>
-                            <p class="author-company">| SmartChain</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="swiper mySwiper">
+    
+    <!--Testimonio 1 -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <img src="/icono-comilla.svg" alt="Icono comilla" />
+          </div>
+          <p class="quote">
+            “Su equipo no solo desarrolló nuestra plataforma, sino que la llevó
+            a otro nivel. La integración con nuestras APIs fue impecable y su
+            soporte técnico, excepcional.”
+          </p>
+          <div class="author-info">
+            <div class="avatar"></div>
+            <div class="author-text">
+              <p class="author-name">Felipe Duarte</p>
+              <p class="author-company">| SmartChain</p>
             </div>
-
-            <div class="swiper-slide">
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <img src="/icono-comilla.svg" alt="Icono comilla">
-                    </div>
-                    <p class="quote">
-                        “Gracias al equipo, logramos optimizar nuestros procesos internos y reducir los tiempos de 
-                        desarrollo en más del 40%. Su enfoque técnico y compromiso marcaron la diferencia.”
-                    </p>
-                    <div class="author-info">
-                        <div class="avatar"></div>
-                        <div class="author-text">
-                            <p class="author-name">Laura Gómez</p>
-                            <p class="author-company">| InnovarTech</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <img src="/icono-comilla.svg" alt="Icono comilla">
-                    </div>
-                    <p class="quote">
-                        “Desde el primer día sentimos que trabajábamos con un equipo propio. Escuchan,
-                        entienden y aportan soluciones con verdadera pasión por la tecnología.”
-                    </p>
-                    <div class="author-info">
-                        <div class="avatar"></div>
-                        <div class="author-text">
-                            <p class="author-name">Andrés Mora</p>
-                            <p class="author-company">| MarketNow</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
-        <!-- Paginación -->
-            <div class="swiper-pagination"></div>
+      </div>
+
+      <!--Testimonio 2 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <img src="/icono-comilla.svg" alt="Icono comilla" />
+          </div>
+          <p class="quote">
+            “Gracias al equipo, logramos optimizar nuestros procesos internos y
+            reducir los tiempos de desarrollo en más del 40%. Su enfoque técnico
+            y compromiso marcaron la diferencia.”
+          </p>
+          <div class="author-info">
+            <div class="avatar"></div>
+            <div class="author-text">
+              <p class="author-name">Laura Gómez</p>
+              <p class="author-company">| InnovarTech</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Testimonio 3 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <img src="/icono-comilla.svg" alt="Icono comilla" />
+          </div>
+          <p class="quote">
+            “Desde el primer día sentimos que trabajábamos con un equipo propio.
+            Escuchan, entienden y aportan soluciones con verdadera pasión por la
+            tecnología.”
+          </p>
+          <div class="author-info">
+            <div class="avatar"></div>
+            <div class="author-text">
+              <p class="author-name">Andrés Mora</p>
+              <p class="author-company">| MarketNow</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
 
 <!-- Swiper JS desde CDN -->
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+</script>
 
 <!-- Inicialización del carrusel -->
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".mySwiper", {
       effect: "coverflow",
       grabCursor: true,
@@ -98,7 +110,7 @@
       },
       autoplay: {
         delay: 4000,
-        disableOnInteraction: true, 
+        disableOnInteraction: true,
         pauseOnMouseEnter: true,
       },
       speed: 600,
@@ -200,7 +212,7 @@
     width: 8px !important;
     height: 8px !important;
     transition: all 0.3s ease;
-}
+  }
 
   :global(.swiper-pagination-bullet-active) {
     background: #ff4400 !important;
