@@ -1,7 +1,12 @@
-<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ">
-  <div class="flex sm:justify-between items-center justify-between py-4 container mx-auto px-4">
+<header
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+>
+  <div
+    class="flex sm:justify-between items-center justify-between py-4 container mx-auto px-4"
+  >
     <!-- Logo -->
-    <a href="#">
+    <a href="../index.html">
       <img
         id="logo"
         src="/logo-agil3-1.svg"
@@ -25,8 +30,11 @@
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
 
@@ -35,9 +43,48 @@
       id="nav-menu"
       class="hidden md:flex gap-x-12 text-white font-medium transition-all duration-300"
     >
-      <a href="#" class="transition-colors hover:text-naranja">Soluciones</a>
+      <!-- Dropdown Soluciones -->
+      <div class="relative group">
+        <button
+          class="flex items-center gap-2 transition-colors hover:text-naranja"
+        >
+          Soluciones
+          <svg
+            class="w-4 h-4 transition-transform group-hover:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          class="absolute left-0 mt-0 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2 z-10"
+        >
+          <a
+            href="../soluciones-corporativas.html"
+            class="block px-4 py-2 hover:bg-gray-100 transition-colors"
+          >
+            Soluciones Corporativas
+          </a>
+          <a
+            href="#"
+            class="block px-4 py-2 hover:bg-gray-100 transition-colors"
+          >
+            WhatsApp Bot
+          </a>
+        </div>
+      </div>
+
       <a href="#" class="transition-colors hover:text-naranja">Integraciones</a>
-      <a href="#" class="transition-colors hover:text-naranja">Casos de éxito</a>
+      <a href="#" class="transition-colors hover:text-naranja">Casos de éxito</a
+      >
       <a href="#" class="transition-colors hover:text-naranja">Contáctenos</a>
     </nav>
   </div>
@@ -47,14 +94,48 @@
     id="mobile-menu"
     class="hidden flex-col items-center bg-white text-black py-6 space-y-4 md:hidden shadow-md transition-all duration-300"
   >
-    <a href="#">Soluciones</a>
-    <a href="#">Integraciones</a>
-    <a href="#">Casos de éxito</a>
-    <a href="#">Contáctenos</a>
+    <!-- Dropdown móvil Soluciones -->
+    <div class="w-full">
+      <button
+        id="mobile-solutions-toggle"
+        class="w-full flex items-center justify-center gap-2 px-4 py-2 hover:bg-gray-100 transition-colors font-medium"
+      >
+        Soluciones
+        <svg
+          id="mobile-solutions-icon"
+          class="w-4 h-4 transition-transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </button>
+
+      <div id="mobile-solutions-dropdown" class="hidden flex-col bg-gray-50">
+        <a href="../soluciones-corporativas.html" class="block px-8 py-2 hover:bg-gray-100 transition-colors">
+          Soluciones Corporativas
+        </a>
+        <a href="#" class="block px-8 py-2 hover:bg-gray-100 transition-colors">
+          WhatsApp Bot
+        </a>
+      </div>
+    </div>
+
+    <a href="#" class="transition-colors hover:text-naranja py-2"
+      >Integraciones</a
+    >
+    <a href="#" class="transition-colors hover:text-naranja py-2"
+      >Casos de éxito</a
+    >
+    <a href="#" class="transition-colors hover:text-naranja py-2">Contáctenos</a
+    >
   </div>
 </header>
-
-
 
 <script>
   const navbar = document.getElementById("navbar");
@@ -63,29 +144,49 @@
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const menuIcon = document.getElementById("menu-icon");
+  const mobileSolutionsToggle = document.getElementById("mobile-solutions-toggle");
+  const mobileSolutionsDropdown = document.getElementById("mobile-solutions-dropdown");
+  const mobileSolutionsIcon = document.getElementById("mobile-solutions-icon");
 
-  // Efecto al hacer scroll
+
+  // EFECTO SCROLL
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("bg-white", "shadow-md");
-      navMenu.classList.remove("text-white");
-      navMenu.classList.add("text-black");
-      menuIcon.classList.remove("text-white");
-      menuIcon.classList.add("text-black");
-      logo.src = "/logo-agil3-2.svg";
-    } else {
-      navbar.classList.remove("bg-white", "shadow-md");
-      navMenu.classList.remove("text-black");
-      navMenu.classList.add("text-white");
-      menuIcon.classList.remove("text-black");
-      menuIcon.classList.add("text-white");
-      logo.src = "/logo-agil3-1.svg";
-    }
+    if (!navbar || !navMenu || !menuIcon || !logo) return;
+
+    const scrollActive = window.scrollY > 50;
+
+    navbar.classList.toggle("bg-white", scrollActive);
+    navbar.classList.toggle("shadow-md", scrollActive);
+
+    navMenu.classList.toggle("text-white", !scrollActive);
+    navMenu.classList.toggle("text-black", scrollActive);
+
+    menuIcon.classList.toggle("text-white", !scrollActive);
+    menuIcon.classList.toggle("text-black", scrollActive);
+
+    logo.src = scrollActive ? "/logo-agil3-2.svg" : "/logo-agil3-1.svg";
   });
 
-  // Lógica del menú hamburguesa
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("flex");
-  });
+  // MENÚ HAMBURGUESA
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+
+      // Solo usamos hidden → Tailwind maneja el display
+      mobileMenu.classList.toggle("hidden", !isHidden);
+      mobileMenu.classList.toggle("flex", isHidden);
+    });
+  }
+
+  // DROPDOWN SOLUCIONES EN MÓVIL
+  if (mobileSolutionsToggle && mobileSolutionsDropdown && mobileSolutionsIcon) {
+    mobileSolutionsToggle.addEventListener("click", () => {
+      const isHidden = mobileSolutionsDropdown.classList.contains("hidden");
+
+      mobileSolutionsDropdown.classList.toggle("hidden", !isHidden);
+      mobileSolutionsDropdown.classList.toggle("flex", isHidden);
+
+      mobileSolutionsIcon.classList.toggle("rotate-180");
+    });
+  }
 </script>
