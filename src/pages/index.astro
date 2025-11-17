@@ -6,7 +6,7 @@ import equipo from "../assets/equipo-de-trabajo.png";
 import equipo2 from "../assets/equipo-de-trabajo-2.png";
 import codigo from "../assets/codigo.png";
 import { Image } from "astro:assets";
-
+import heroImg from "../assets/imagen-hero-1.jpg";
 
 const empresas = [
   {
@@ -14,7 +14,6 @@ const empresas = [
     nombre: "Cosmoagro",
     texto:
       "Lorem ipsum dolor sit amet consectetur. Auctor donec facilisis tellus magna. Posuere ullamcorper.",
-
   },
   {
     logo: "/logo-asocana.png",
@@ -44,355 +43,397 @@ const empresas = [
 ---
 
 <Layout>
- 	 <!-- Hero Section -->
-  	<section
-    class="relative bg-cover bg-center text-white"
-    style="background-image: url('../src/assets/imagen-hero-1.jpg')"
-  >
-    	<div class="absolute inset-0 bg-black/40"></div>
+  <!-- Hero Section -->
 
-		<div
-		class="relative container mx-auto px-6 sm:px-10 md:px-16 lg:px-40 xl:px-60 2xl:px-80 pt-24 sm:pt-40 md:pt-52 lg:pt-60 pb-24 sm:pb-40 md:pb-60 lg:pb-80 text-center"
-		>
-		<h1
-			class="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight"
-		>
-			Soluciones de Software <br />
-			que <span class="text-naranja font-bold">evolucionan</span> su empresa
-		</h1>
-		<p class="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
-			Creamos soluciones digitales adaptadas a las necesidades de su empresa,
-			impulsando su transformación con tecnología ágil, segura y eficiente.
-		</p>
-		</div>
+  <section class="relative text-white">
+    <!-- Imagen optimizada por Astro -->
+    <Image
+      src={heroImg}
+      alt="Imagen de fondo hero"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+      loading="eager"
+    />
 
-    	<!-- Curva inferior -->
-		<svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320">
-		<path
-			fill="#ffffff"
-			fill-opacity="1"
-			d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-		></path>
-		</svg>
-  	</section>
+    <!-- Capa oscura encima de la imagen -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
 
-  	<!-- Titulo "¿Listo para transformar su empresa?" -->
+    <!-- Contenido del hero -->
+    <div
+      class="relative z-20 container mx-auto px-6 sm:px-10 md:px-16 lg:px-40 xl:px-60 2xl:px-80
+           pt-24 sm:pt-40 md:pt-52 lg:pt-60 pb-24 sm:pb-40 md:pb-60 lg:pb-80 text-center"
+    >
+      <h1
+        class="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight"
+      >
+        Soluciones de Software <br />
+        que <span class="text-naranja font-bold">evolucionan</span> su empresa
+      </h1>
 
-  	<section class="xl:pl-0 p-8">
-		<h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
-		¿Listo para <span class="text-naranja">transformar</span> su empresa?
-		</h2>
-		<p class="text-grisclaro sm:text-2xl text-base text-center mt-4">
-		En <span class="font-bold"> Agil3</span> lo ayudamos a hacerlo realidad con
-		tecnología y estrategia.
-		</p>
-		
-  	</section>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
-		<path
-			fill="#F5F5F5"
-			fill-opacity="1"
-			d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-		></path>
-	</svg>
+      <p class="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
+        Creamos soluciones digitales adaptadas a las necesidades de su empresa,
+        impulsando su transformación con tecnología ágil, segura y eficiente.
+      </p>
+    </div>
 
-  	<!-- Sección de servicios -->
+    <!-- Curva inferior -->
+    <svg class="absolute bottom-0 left-0 w-full z-30" viewBox="0 0 1440 320">
+      <path
+        fill="#ffffff"
+        fill-opacity="1"
+        d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
+    </svg>
+  </section>
 
-  	<section class="bg-[#F5F5F5] px-6 md:px-20 lg:px-40 xl:px-80">
-		<div
-		class="grid gap-12 md:gap-16 lg:gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-grisclaro"
-		>
-		<!-- Tarjeta 1 -->
-		<div
-			class="flex flex-col items-center justify-center text-center gap-4 px-4"
-		>
-			<img src="/icono-bot.svg" alt="Icono WhatsApp Bot" class="w-20 h-20" />
-			<h3 class="text-2xl font-semibold">WhatsApp Bot</h3>
-			<p class="text-lg">
-			Ahorre tiempo en la atención al cliente y optimice los recursos de su
-			empresa con nuestro Robot para WhatsApp.
-			</p>
-			<a href="#" class="text-naranja font-medium hover:underline"
-			>Ver más ></a
-			>
-		</div>
+  <!-- Titulo "¿Listo para transformar su empresa?" -->
 
-		<!-- Tarjeta 2 -->
-		<div
-			class="flex flex-col items-center justify-center text-center gap-4 px-4"
-		>
-			<img
-			src="/icono-integraciones.svg"
-			alt="Icono Integraciones"
-			class="w-20 h-20"
-			/>
-			<h3 class="text-2xl font-semibold">Integraciones</h3>
-			<p class="text-lg">
-			Pieza clave para automatizar y aumentar la productividad en los
-			procesos de nuestros clientes.
-			</p>
-			<a href="#" class="text-naranja font-medium hover:underline"
-			>Ver más ></a
-			>
-		</div>
+  <section class="xl:pl-0 p-8">
+    <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
+      ¿Listo para <span class="text-naranja">transformar</span> su empresa?
+    </h2>
+    <p class="text-grisclaro sm:text-2xl text-base text-center mt-4">
+      En <span class="font-bold"> Agil3</span> lo ayudamos a hacerlo realidad con
+      tecnología y estrategia.
+    </p>
+  </section>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+    <path
+      fill="#F5F5F5"
+      fill-opacity="1"
+      d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+    ></path>
+  </svg>
 
-		<!-- Tarjeta 3 -->
-		<div
-			class="flex flex-col items-center justify-center text-center gap-4 px-4"
-		>
-			<img
-			src="/icono-soluciones.svg"
-			alt="Icono Soluciones Corporativas"
-			class="w-20 h-20"
-			/>
-			<h3 class="text-2xl font-semibold">Soluciones Corporativas</h3>
-			<p class="text-lg">
-			Utilizamos la tecnología para aumentar la productividad de las
-			empresas a través de soluciones de software.
-			</p>
-			<a href="#" class="text-naranja font-medium hover:underline"
-			>Ver más ></a
-			>
-		</div>
-		</div>
-  	</section>
+  <!-- Sección de servicios -->
 
-  	<!-- puntos decorativos -->
+  <section class="bg-[#F5F5F5] px-6 md:px-20 lg:px-40 xl:px-80">
+    <div
+      class="grid gap-12 md:gap-16 lg:gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-grisclaro"
+    >
+      <!-- Tarjeta 1 -->
+      <div
+        class="flex flex-col items-center justify-center text-center gap-4 px-4"
+      >
+        <img src="/icono-bot.svg" alt="Icono WhatsApp Bot" class="w-20 h-20" />
+        <h3 class="text-2xl font-semibold">WhatsApp Bot</h3>
+        <p class="text-lg">
+          Ahorre tiempo en la atención al cliente y optimice los recursos de su
+          empresa con nuestro Robot para WhatsApp.
+        </p>
+        <a href="#" class="text-naranja font-medium hover:underline"
+          >Ver más ></a
+        >
+      </div>
 
-  	<section class="flex items-center justify-center bg-[#F5F5F5]">
-    	<img src="/puntos.svg" alt="puntos decorativos" class="my-32" />
-  	</section>
+      <!-- Tarjeta 2 -->
+      <div
+        class="flex flex-col items-center justify-center text-center gap-4 px-4"
+      >
+        <img
+          src="/icono-integraciones.svg"
+          alt="Icono Integraciones"
+          class="w-20 h-20"
+        />
+        <h3 class="text-2xl font-semibold">Integraciones</h3>
+        <p class="text-lg">
+          Pieza clave para automatizar y aumentar la productividad en los
+          procesos de nuestros clientes.
+        </p>
+        <a href="#" class="text-naranja font-medium hover:underline"
+          >Ver más ></a
+        >
+      </div>
 
-  	<!-- Sección arquitecturas -->
+      <!-- Tarjeta 3 -->
+      <div
+        class="flex flex-col items-center justify-center text-center gap-4 px-4"
+      >
+        <img
+          src="/icono-soluciones.svg"
+          alt="Icono Soluciones Corporativas"
+          class="w-20 h-20"
+        />
+        <h3 class="text-2xl font-semibold">Soluciones Corporativas</h3>
+        <p class="text-lg">
+          Utilizamos la tecnología para aumentar la productividad de las
+          empresas a través de soluciones de software.
+        </p>
+        <a href="#" class="text-naranja font-medium hover:underline"
+          >Ver más ></a
+        >
+      </div>
+    </div>
+  </section>
 
-  	<section
-    class="bg-gradient-to-b from-[#F5F5F5] to-[#FFFFFF] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-28 px-8 md:px-16 lg:px-40 relative sm:pb-60 pb-40 "
+  <!-- puntos decorativos -->
+
+  <section class="flex items-center justify-center bg-[#F5F5F5]">
+    <img src="/puntos.svg" alt="puntos decorativos" class="my-32" />
+  </section>
+
+  <!-- Sección arquitecturas -->
+
+  <section
+    class="bg-gradient-to-b from-[#F5F5F5] to-[#FFFFFF] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-28 px-8 md:px-16 lg:px-40 relative sm:pb-60 pb-40"
   >
     <!-- Texto -->
 
-		<div class="border-l-4 border-naranja pl-6 md:w-1/2 ">
-		<h2 class="text-grisclaro sm:text-5xl text-4xl font-medium leading-tight">
-			Somos <span class="text-naranja">expertos</span><br />
-			en múltiples arquitecturas
-		</h2>
-		<p class="text-base md:text-lg text-grisclaro mt-6 max-w-xl">
-			Utilizamos las mejores tecnologías del mercado para crear aplicaciones
-			rápidas, seguras y flexibles. Desde interfaces modernas hasta bases de
-			datos robustas, integramos cada componente para ofrecer soluciones
-			digitales que impulsen el crecimiento de su empresa.
-		</p>
-		</div>
-
-		<!-- Logos -->
-
-		<div class="mt-16 sm:mt-0">
-		<img
-			src="/tecnologias.svg"
-			alt="Tecnologías"
-			class="hover:scale-110 transition-transform duration-300"
-		/>
-		</div>
-
-		<svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 255">
-		<path
-			fill="#FFD4B6"
-			fill-opacity="1"
-			d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-		></path>
-		</svg>
-
-  	</section>
-
-  	<!-- Sección testimonios -->
-
-  	<section class="bg-gradient-to-b from-[#FFD4B6] to-[#FFFFFF] xl:pl-0 p-10">
-		<h2
-		class="text-grisclaro sm:text-5xl text-4xl font-medium text-center pt-16"
-		>
-		Lo que dicen <span class="text-naranja">nuestros</span> clientes
-		</h2>
-		<p
-		class="text-grisclaro sm:text-2xl items-center justify-center text-center text-base mt-4 max-w-4xl mx-auto"
-		>
-		Nos enorgullece construir relaciones duraderas basadas en confianza,
-		resultados y acompañamiento constante. Esto es lo que nuestros clientes
-		piensan de trabajar con nosotros.
-		</p>
-  	</section>
-
-  	<!-- Carrusel de testimonios -->
-  	<Carrusel />
-
-	<!-- Testimonios de clientes-->
-  	<section>
-		<div class="full-w mx-auto flex flex-col md:flex-row items-center sm:gap-20 mt-20">
-			<!-- Imagen -->
-			<div class="md:w-2/6 relative">
-				<Image src={equipo} alt="Equipo trabajando" class="sm:rounded-tr-2xl sm:rounded-br-2xl shadow-md"/>
-
-				<!-- Puntos decorativos -->
-				<div
-				class="absolute top-0 left-0 w-20 h-20 bg-orange-400 rounded-full -translate-x-4 -translate-y-4"
-				>
-				</div>
-				<div
-				class="absolute bottom-10 right-40 w-6 h-6 bg-orange-400 rounded-full"
-				>
-				</div>
-			</div>
-
-			<!-- Contenido -->
-			<div class="md:w-3/5  xl:pr-60 xl:pl-0 p-10">
-				<h2 class="sm:text-5xl text-4xl font-medium text-grisclaro ">
-					Empresas líderes <span class="text-orange-500">confían</span> en nosotros
-				</h2>
-
-				<p class="mt-4 text-grisclaro leading-relaxed text-lg">
-					Desarrollamos soluciones tecnológicas innovadoras y a la medida, que
-					impulsan su crecimiento y fortalecen su transformación digital.
-				</p>
-
-				<!-- Grid de empresas -->
-				<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-				{
-					empresas.map((empresa) => (
-					<div
-						class={`bg-white shadow-md rounded-xl p-6 border hover:shadow-lg transition border-transparent"}`}
-					>
-						<img
-						src={empresa.logo}
-						alt={empresa.nombre}
-						class="w-16h-auto mb-4 mx-auto"
-						/>
-						<p class="text-sm text-gray-600 mb-3 text-center">
-						{empresa.texto}
-						</p>
-						<p class="text-orange-500 text-sm font-semibold text-center">
-						Ver más &gt;
-						</p>
-					</div>
-					))
-				}
-				</div>
-			</div>
-		</div>
-  	</section>
-
-	<!-- Sección contactanos -->
-	<section class="relative bg-gradient-to-b from-naranja to-[#FFA160] text-white mt-60 py-[80px]">
-		<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-			<!-- Texto -->
-			<div class="max-w-md text-center md:text-left">
-				<h2 class="text-3xl md:text-3xl font-medium leading-snug mb-3">
-					¿Listo para llevar el desarrollo<br />
-					de tu empresa al siguiente nivel?
-				</h2>
-				<p class="text-white/90 mb-6 text-lg">
-					Descubre cómo podemos hacerlo realidad.
-				</p>
-				<a href="/contacto"
-					class="inline-block bg-[#2C2C2C] hover:bg-black transition-colors text-white font-semibold py-3 px-6 rounded-md"
-				>
-					Contáctanos
-				</a>
-			</div>
-
-			<!-- Imágenes -->
-			<div class="absolute right-80 bottom-10 flex items-center justify-center w-full md:w-auto">
-				<!-- Imagen principal -->
-				<div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl">
-					<Image src={equipo2} alt="Equipo de trabajo" class="w-full h-full object-cover" />
-				</div>
-
-				<!-- Imagen secundaria -->
-				<div class="absolute -bottom-32 -right-10 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg">
-					<Image src={codigo} alt="Código HTML" class="w-full h-full object-cover" />
-				</div>
-
-				<!-- Círculo decorativo -->
-				<div class="absolute -bottom-5 right-1/2 md:right-20 w-5 h-5 rounded-full border-2 border-white/60"></div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Sección formulario de contacto -->
-	<section class="py-16 mt-20 pb-40 px-4 bg-gradient-to-b from-white to-[#FFD9BF]">
-  		<div class="max-w-4xl mx-auto">
-    	<h2 class="text-4xl md:text-5xl font-medium text-center mb-12 text-grisclaro">
-     	 Estamos listos para ayudarte a <span class="text-orange-500">crecer</span>
-    	</h2>
-
-    	<form class="space-y-4 max-w-3xl mx-auto" id="contactForm">
-      	<!-- Nombre -->
-      	<div>
-        	<input
-          type="text"
-          name="nombre"
-          placeholder="Nombre"
-          required
-          class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
-        />
-      	</div>
-
-      <!-- Email -->
-      	<div>
-        	<input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-          class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
-        	/>
-      	</div>
-
-      	<!-- Celular y Empresa -->
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			<input
-			type="tel"
-			name="celular"
-			placeholder="Celular"
-			required
-			class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
-			/>
-			<input
-			type="text"
-			name="empresa"
-			placeholder="Empresa"
-			class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
-			/>
-		</div>
-
-		<!-- Mensaje -->
-		<div>
-			<textarea
-			name="mensaje"
-			placeholder="Mensaje"
-			rows="4"
-			required
-			class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all resize-none"
-			></textarea>
-		</div>
-
-		<!-- reCAPTCHA -->
-		<div class="flex justify-start">
-			<div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
-		</div>
-
-		<!-- Botón de envío -->
-		<div>
-			<button
-			type="submit"
-			class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
-			>
-			Enviar
-			</button>
-      	</div>
-    </form>
-
-    <!-- Mensaje de éxito/error -->
-    <div id="formMessage" class="mt-6 hidden">
-      <div class="p-4 rounded-lg text-center font-medium"></div>
+    <div class="border-l-4 border-naranja pl-6 md:w-1/2">
+      <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium leading-tight">
+        Somos <span class="text-naranja">expertos</span><br />
+        en múltiples arquitecturas
+      </h2>
+      <p class="text-base md:text-lg text-grisclaro mt-6 max-w-xl">
+        Utilizamos las mejores tecnologías del mercado para crear aplicaciones
+        rápidas, seguras y flexibles. Desde interfaces modernas hasta bases de
+        datos robustas, integramos cada componente para ofrecer soluciones
+        digitales que impulsen el crecimiento de su empresa.
+      </p>
     </div>
-  	</div>
-	</section>
+
+    <!-- Logos -->
+
+    <div class="mt-16 sm:mt-0">
+      <img
+        src="/tecnologias.svg"
+        alt="Tecnologías"
+        class="hover:scale-110 transition-transform duration-300"
+      />
+    </div>
+
+    <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 255">
+      <path
+        fill="#FFD4B6"
+        fill-opacity="1"
+        d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
+    </svg>
+  </section>
+
+  <!-- Sección testimonios -->
+
+  <section class="bg-gradient-to-b from-[#FFD4B6] to-[#FFFFFF] xl:pl-0 p-10">
+    <h2
+      class="text-grisclaro sm:text-5xl text-4xl font-medium text-center pt-16"
+    >
+      Lo que dicen <span class="text-naranja">nuestros</span> clientes
+    </h2>
+    <p
+      class="text-grisclaro sm:text-2xl items-center justify-center text-center text-base mt-4 max-w-4xl mx-auto"
+    >
+      Nos enorgullece construir relaciones duraderas basadas en confianza,
+      resultados y acompañamiento constante. Esto es lo que nuestros clientes
+      piensan de trabajar con nosotros.
+    </p>
+  </section>
+
+  <!-- Carrusel de testimonios -->
+  <Carrusel />
+
+  <!-- Testimonios de clientes-->
+  <section>
+    <div
+      class="full-w mx-auto flex flex-col md:flex-row items-center sm:gap-20 mt-20"
+    >
+      <!-- Imagen -->
+      <div class="md:w-2/6 relative">
+        <Image
+          src={equipo}
+          alt="Equipo trabajando"
+          class="sm:rounded-tr-2xl sm:rounded-br-2xl shadow-md"
+        />
+
+        <!-- Puntos decorativos -->
+        <div
+          class="absolute top-0 left-0 w-20 h-20 bg-orange-400 rounded-full -translate-x-4 -translate-y-4"
+        >
+        </div>
+        <div
+          class="absolute bottom-10 right-40 w-6 h-6 bg-orange-400 rounded-full"
+        >
+        </div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="md:w-3/5 xl:pr-60 xl:pl-0 p-10">
+        <h2 class="sm:text-5xl text-4xl font-medium text-grisclaro">
+          Empresas líderes <span class="text-orange-500">confían</span> en nosotros
+        </h2>
+
+        <p class="mt-4 text-grisclaro leading-relaxed text-lg">
+          Desarrollamos soluciones tecnológicas innovadoras y a la medida, que
+          impulsan su crecimiento y fortalecen su transformación digital.
+        </p>
+
+        <!-- Grid de empresas -->
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          {
+            empresas.map((empresa) => (
+              <div
+                class={`bg-white shadow-md rounded-xl p-6 border hover:shadow-lg transition border-transparent"}`}
+              >
+                <img
+                  src={empresa.logo}
+                  alt={empresa.nombre}
+                  class="w-16h-auto mb-4 mx-auto"
+                />
+                <p class="text-sm text-gray-600 mb-3 text-center">
+                  {empresa.texto}
+                </p>
+                <p class="text-orange-500 text-sm font-semibold text-center">
+                  Ver más &gt;
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección contactanos -->
+  <section
+    class="relative bg-gradient-to-b from-naranja to-[#FFA160] text-white mt-60 py-[80px]"
+  >
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6"
+    >
+      <!-- Texto -->
+      <div class="max-w-md text-center md:text-left">
+        <h2 class="text-3xl md:text-3xl font-medium leading-snug mb-3">
+          ¿Listo para llevar el desarrollo<br />
+          de tu empresa al siguiente nivel?
+        </h2>
+        <p class="text-white/90 mb-6 text-lg">
+          Descubre cómo podemos hacerlo realidad.
+        </p>
+        <a
+          href="/contacto"
+          class="inline-block bg-[#2C2C2C] hover:bg-black transition-colors text-white font-semibold py-3 px-6 rounded-md"
+        >
+          Contáctanos
+        </a>
+      </div>
+
+      <!-- Imágenes -->
+      <div
+        class="absolute right-80 bottom-10 flex items-center justify-center w-full md:w-auto"
+      >
+        <!-- Imagen principal -->
+        <div
+          class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl"
+        >
+          <Image
+            src={equipo2}
+            alt="Equipo de trabajo"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Imagen secundaria -->
+        <div
+          class="absolute -bottom-32 -right-10 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg"
+        >
+          <Image
+            src={codigo}
+            alt="Código HTML"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Círculo decorativo -->
+        <div
+          class="absolute -bottom-5 right-1/2 md:right-20 w-5 h-5 rounded-full border-2 border-white/60"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección formulario de contacto -->
+  <section
+    class="py-16 mt-20 pb-40 px-4 bg-gradient-to-b from-white to-[#FFD9BF]"
+  >
+    <div class="max-w-4xl mx-auto">
+      <h2
+        class="text-4xl md:text-5xl font-medium text-center mb-12 text-grisclaro"
+      >
+        Estamos listos para ayudarte a <span class="text-orange-500"
+          >crecer</span
+        >
+      </h2>
+
+      <form class="space-y-4 max-w-3xl mx-auto" id="contactForm">
+        <!-- Nombre -->
+        <div>
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Nombre"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+        </div>
+
+        <!-- Celular y Empresa -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="tel"
+            name="celular"
+            placeholder="Celular"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+          <input
+            type="text"
+            name="empresa"
+            placeholder="Empresa"
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+        </div>
+
+        <!-- Mensaje -->
+        <div>
+          <textarea
+            name="mensaje"
+            placeholder="Mensaje"
+            rows="4"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all resize-none"
+          ></textarea>
+        </div>
+
+        <!-- reCAPTCHA -->
+        <div class="flex justify-start">
+          <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+
+      <!-- Mensaje de éxito/error -->
+      <div id="formMessage" class="mt-6 hidden">
+        <div class="p-4 rounded-lg text-center font-medium"></div>
+      </div>
+    </div>
+  </section>
 </Layout>
