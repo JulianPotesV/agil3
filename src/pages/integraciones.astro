@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeaderPaginas from "../components/HeaderPaginas.astro";
+import { Image } from "astro:assets";
+import logoHubspot from "../assets/integraciones/logo-hubspot.png";
+import logoShopify from "../assets/integraciones/logo-shopify.png";
+import logoAws from "../assets/integraciones/logo-aws.png";
+import logoZoho from "../assets/integraciones/logo-zoho.png";
+import logoWooComerce from "../assets/integraciones/logo-woo-comerce.png";
+import logoTwilio from "../assets/integraciones/logo-twilio.png";
+import logoFacebook from "../assets/integraciones/logo-facebook.png";
+import logoGoole from "../assets/integraciones/logo-google.png";
+import logoInstagram from "../assets/integraciones/logo-instagram.png";
+import logoSiesa from "../assets/integraciones/logo-siesa.png";
+import logoSap from "../assets/integraciones/logo-sap.png";
+import logoDynamics from "../assets/integraciones/logo-dynamics.png";
+---
+
+<Layout>
+    <HeaderPaginas
+    title="Integraciones"
+    description="La Integración de sistemas de software es una necesidad muy común entre las compañías, poner a interactuar entre si varios sistemas como el ERP, el CRM, la Tienda en Línea y la Telefonía, resultan de vital importancia para mejorar la productividad. En Agil3 somos expertos en realizar estas conexiones, garantizado la estabilidad en el intercambio de información entre el origen y destino de la información."
+    images={[
+      "../src/assets/integraciones/integraciones-imagen-1.png",
+      "../src/assets/integraciones/integraciones-imagen-2.png",
+      "../src/assets/integraciones/integraciones-imagen-3.png",
+    ]}
+    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    align="left">
+        
+    </HeaderPaginas>
+
+    <section class="flex flex-col items-center">
+        <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-24">
+            ¿Plataformas <span class="text-naranja">Integradas</span>
+        </h2>
+
+        <p class="text-grisclaro sm:text-2xl text-base text-center mt-4 max-w-[60%] text">
+            En Agil3 tenemos la capacidad de interconectar diversas fuentes de datos, cualquiera de
+            estos sistemas  (entre otros) pueden convertirse en origen o destino de información
+        </p>
+
+        <div class="flex bg-gradient-to-b from-[#FFECDF] to-[#FFC69F]">
+            <div>
+                <h2>Cloud Services</h2>
+                <img src="" alt="">
+                <div class="grid grid-cols-3">
+                    <Image src={logoHubspot} alt={"Imagen logo HubSpot"} />
+                    <Image src={logoShopify} alt={"Imagen logo Shopyfy"} />
+                    <Image src={logoAws} alt={"Imagen logo AWA"} />
+                    <Image src={logoZoho} alt={"Imagen logo Zoho"} />
+                    <Image src={logoWooComerce} alt={"Imagen logo Woo Comerce"} />
+                    <Image src={logoTwilio} alt={"Imagen logo Twilio"} />
+                    <Image src={logoFacebook} alt={"Imagen logo Facebook"} />
+                    <Image src={logoGoole} alt={"Imagen logo Google"} />
+                    <Image src={logoInstagram} alt={"Imagen logo Instagram"} />
+                </div>
+            </div>
+
+            <div>
+                <h2>Sistemas ERP</h2>
+                <img src="" alt="">
+                <div class="grid grid-cols-3">
+                    <Image src={logoSiesa} alt={"Imagen logo Siesa"} />
+                    <Image src={logoSap} alt={"Imagen logo SAP"} />
+                    <Image src={logoDynamics} alt={"Imagen logo Dynamics"} />
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</Layout>

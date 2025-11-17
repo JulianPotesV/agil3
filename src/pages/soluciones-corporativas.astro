@@ -6,102 +6,115 @@ import Boton from "../components/Boton.astro";
 ---
 
 <Layout>
-    <HeaderPaginas
-      title="Soluciones Corporativas"
-      description="Somos expertos en implementación de soluciones corporativas, utilizamos la tecnología para aumentar la productividad de las empresas, optimizando sus procesos internos a través de soluciones de software personalizadas o adaptación de aplicaciones existentes."
-      images={["../src/assets/soluciones-imagen-1.png", "../src/assets/soluciones-imagen-2.png", "../src/assets/soluciones-imagen-3.jpg"]}
-      backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
-      align="left"
+  <HeaderPaginas
+    title="Soluciones Corporativas"
+    description="Somos expertos en implementación de soluciones corporativas, utilizamos la tecnología para aumentar la productividad de las empresas, optimizando sus procesos internos a través de soluciones de software personalizadas o adaptación de aplicaciones existentes."
+    images={[
+      "../src/assets/soluciones-corp/soluciones-imagen-1.png",
+      "../src/assets/soluciones-corp/soluciones-imagen-2.png",
+      "../src/assets/soluciones-corp/soluciones-imagen-3.jpg",
+    ]}
+    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    align="left"
+  />
+
+  <section class="mt-32">
+    <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
+      Nuestras <span class="text-naranja">soluciones</span>
+    </h2>
+
+    <TarjetaSoluciones
+      badge="PWA's"
+      title="Aplicaciones Moviles y Web"
+      description={[
+        "La mejor característica de una aplicación web progresiva es que se comporta como una App móvil, funcionan en modo online/offline, almacenan datos en el dispositivo, tienen ubicación geográfica etc. Se actualizan automáticamente y no requieren de descarga en tiendas (Google o Apple), simplemente se debe entrar a una dirección web.Son óptimas para captura de datos (eg. agricultura) y para potencializar la fuerza de ventas de la empresa.",
+      ]}
+      image="../src/assets/tarjetas/imagen-tarjeta-1.png"
+      buttonLabel="Contratar"
+    />
+
+    <TarjetaSoluciones
+      badge="Para departamentos comerciales"
+      title="Portal de Pedidos"
+      description={[
+        "Producto ideal para la fuerza de ventas, consta de:",
+        "• Aplicación móvil de captura de pedidos y reporte de visitas comerciales que opera online y offline.",
+        "• Portal web de reportes y gestión de pedidos, aprobaciones, control de cupos.",
+      ]}
+      image="../src/assets/tarjetas/imagen-tarjeta-2.png"
+      buttonLabel="Contratar"
+    />
+
+    <TarjetaSoluciones
+      badge="Compras y logística"
+      title="Compras y logística"
+      description={[
+        "Solución encargada de agilizar el proceso de compras en la empresa, desde la aprobación de solicitudes hasta crear el documento de orden de compra en el ERP.",
+        "Automatiza el contacto con los proveedores para que envíen sus cotizaciones.",
+        "La Información de cotizaciones se centraliza, se acaban las cotizaciones por correo, fax o teléfono. Todos los proveedores cotizan por el mismo medio, evitando que queden cotizaciones por fuera del proceso de compra.",
+        "Eficiencia en la selección del proveedor: Elimina la elaboración de archivos alternos con cuadros comparativos, los cuales consumen tiempo y recursos.",
+        "Nuestro sistema agiliza la toma de decisión de compra sugiriendo la mejor opción en precio, días de entrega, % incremento.",
+      ]}
+      image="../src/assets/tarjetas/imagen-tarjeta-3.png"
+      buttonLabel="Contratar"
+    />
+  </section>
+
+  <section>
+    <h2
+      class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-36"
     >
-    
-    </HeaderPaginas>
-    
+      Casos de <span class="text-naranja">éxito</span>
+    </h2>
 
-    <section class="mt-32">
-        
-        <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
-		Nuestras <span class="text-naranja">soluciones</span>
-	    </h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+      <path
+        fill="#FFDDC5"
+        fill-opacity="1"
+        d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
+    </svg>
 
-        <TarjetaSoluciones
-          badge="PWA's"
-          title="Aplicaciones Moviles y Web"
-          description={[
-            "La mejor característica de una aplicación web progresiva es que se comporta como una App móvil, funcionan en modo online/offline, almacenan datos en el dispositivo, tienen ubicación geográfica etc. Se actualizan automáticamente y no requieren de descarga en tiendas (Google o Apple), simplemente se debe entrar a una dirección web.Son óptimas para captura de datos (eg. agricultura) y para potencializar la fuerza de ventas de la empresa."
-          ]}
-          image="../src/assets/tarjetas/imagen-tarjeta-1.png"
-          buttonLabel="Contratar">
-            
-        </TarjetaSolucione>
-
-        <TarjetaSoluciones
-          badge="Para departamentos comerciales"
-          title="Portal de Pedidos"
-          description={[
-            "Producto ideal para la fuerza de ventas, consta de:",
-            "• Aplicación móvil de captura de pedidos y reporte de visitas comerciales que opera online y offline.",
-            "• Portal web de reportes y gestión de pedidos, aprobaciones, control de cupos.",
-          ]}
-          image="../src/assets/tarjetas/imagen-tarjeta-2.png"
-          buttonLabel="Contratar">
-            
-        </TarjetaSolucione>
-
-        <TarjetaSoluciones
-          badge="Para departamentos comerciales"
-          title="Portal de Pedidos"
-          description={[
-            "Solución encargada de agilizar el proceso de compras en la empresa, desde la aprobación de solicitudes hasta crear el documento de orden de compra en el ERP.",
-            "Automatiza el contacto con los proveedores para que envíen sus cotizaciones.",
-            "La Información de cotizaciones se centraliza, se acaban las cotizaciones por correo, fax o teléfono. Todos los proveedores cotizan por el mismo medio, evitando que queden cotizaciones por fuera del proceso de compra.",
-            "Eficiencia en la selección del proveedor: Elimina la elaboración de archivos alternos con cuadros comparativos, los cuales consumen tiempo y recursos.",
-            "Nuestro sistema agiliza la toma de decisión de compra sugiriendo la mejor opción en precio, días de entrega, % incremento.",
-          ]}
-          image="../src/assets/tarjetas/imagen-tarjeta-3.png"
-          buttonLabel="Contratar">
-
-        </TarjetaSoluciones>
-    </section>
-
-    <section>
-
-        <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-36">
-		Casos de <span class="text-naranja">éxito</span>
-	    </h2>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
-		<path
-			fill="#FFDDC5"
-			fill-opacity="1"
-			d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-		></path>
-        </svg>
-
-        <div class="bg-gradient-to-b from-[#FFDDC5] to-white">
-            <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch sm:max-w-5xl max-w-[90%] mx-auto">
-
-                <div class="flex flex-col items-center sm:border-r-2 border-naranja sm:pr-24 gap-12">
-                    <img src="../src/assets/casos-de-exito/balinera-caso.png" alt="Logotipo Balinera S.A" class="w-40">
-                    <p class="text-grisclaro">En la Balinera S.A, <strong>el portal de ventas</strong> ayudo a <strong>incrementar los negocios cerrados en un 
-                        60%,</strong> se paso de un promedio de 15 cotizaciones semanales a 40 por cada asesor. Con la 
-                        aplicación móvil se reportan todos los eventos en línea y la gerencia esta al tanto en
-                        tiempo real de los que haces su fuerza de ventas.</p>
-                </div>
-
-                <div class="flex flex-col items-center sm:pl-24 gap-12 sm:mt-0 mt-16">
-                    <img src="../src/assets/casos-de-exito/asocana-caso.png" alt="Logotipo Asocaña" class="w-40">
-                    <p class="text-grisclaro">En la Balinera S.A, <strong>el portal de ventas</strong> ayudo a <strong>incrementar los negocios cerrados en un 
-                        60%,</strong> se paso de un promedio de 15 cotizaciones semanales a 40 por cada asesor. Con la 
-                        aplicación móvil se reportan todos los eventos en línea y la gerencia esta al tanto en
-                        tiempo real de los que haces su fuerza de ventas.</p>
-                </div>
-            </div>
+    <div class="bg-gradient-to-b from-[#FFDDC5] to-white">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 items-stretch sm:max-w-5xl max-w-[90%] mx-auto"
+      >
+        <div
+          class="flex flex-col items-center sm:border-r-2 border-naranja sm:pr-24 gap-12"
+        >
+          <img
+            src="../src/assets/casos-de-exito/balinera-caso.png"
+            alt="Logotipo Balinera S.A"
+            class="w-40"
+          />
+          <p class="text-grisclaro text-lg">
+            En la Balinera S.A, <strong>el portal de ventas</strong> ayudo a <strong
+              >incrementar los negocios cerrados en un 60%,</strong
+            > se paso de un promedio de 15 cotizaciones semanales a 40 por cada asesor.
+            Con la aplicación móvil se reportan todos los eventos en línea y la gerencia
+            esta al tanto en tiempo real de los que haces su fuerza de ventas.
+          </p>
         </div>
 
-        <div class="flex items-center justify-center my-40">
-        <Boton text="Contáctanos"></Boton>
+        <div class="flex flex-col items-center sm:pl-24 gap-12 sm:mt-0 mt-16">
+          <img
+            src="../src/assets/casos-de-exito/asocana-caso.png"
+            alt="Logotipo Asocaña"
+            class="w-40"
+          />
+          <p class="text-grisclaro text-lg">
+            En la Balinera S.A, <strong>el portal de ventas</strong> ayudo a <strong
+              >incrementar los negocios cerrados en un 60%,</strong
+            > se paso de un promedio de 15 cotizaciones semanales a 40 por cada asesor.
+            Con la aplicación móvil se reportan todos los eventos en línea y la gerencia
+            esta al tanto en tiempo real de los que haces su fuerza de ventas.
+          </p>
         </div>
+      </div>
+    </div>
 
-    </section>
-
+    <div class="flex items-center justify-center my-40">
+      <Boton text="Contáctanos" />
+    </div>
+  </section>
 </Layout>

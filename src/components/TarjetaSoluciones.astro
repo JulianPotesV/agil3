@@ -21,10 +21,10 @@ const {
 <div class="bg-[#F5F5F5] rounded-lg overflow-hidden sm:max-w-[80%] max-w-[90%] items-center mx-auto my-12 shadow-md">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
     <!-- Contenido izquierdo -->
-    <div class="flex flex-col gap-6 sm:py-16 sm:pl-16 p-8">
+    <div class="flex flex-col gap-16 sm:py-16 sm:pl-16 p-8 ">
       {badge && (
         <div class="inline-flex">
-          <span class="bg-[#FFC69F] text-naranja px-4 py-1.5 rounded-full text-sm font-regular w-fit">
+          <span class="bg-[#FFC69F] text-naranja px-4 py-1.5 rounded-full text-lg font-regular w-fit">
             {badge}
           </span>
         </div>
@@ -36,7 +36,7 @@ const {
 
       <div class="space-y-4">
         {description.map((paragraph) => (
-          <p class="text-grisclaro leading-relaxed text-base">
+          <p class="text-grisclaro leading-relaxed text-lg">
             {paragraph}
           </p>
         ))}

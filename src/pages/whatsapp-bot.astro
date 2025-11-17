@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeaderPaginas from "../components/HeaderPaginas.astro";
+import { Image } from "astro:assets";
+import imagenCaracteristicas from "/public/imagenes/whatsapp-bot/caracteristicas.png";
+import imagenRobot from "/public/imagenes/whatsapp-bot/robot.png";
+import Boton from "../components/Boton.astro";
+---
+
+<Layout>
+  <HeaderPaginas
+    title="WhatsApp Bot"
+    description="Es conocido por todos que WhatsApp se convirtió en una aplicación muy importante para las compañías, ya que es una herramienta vital para la fuerza de ventas y servicio al cliente. Con nuestro Bot potencia tu fuerza de ventas, consolida de forma rápida la atención al cliente y todo solo con WhatsApp de forma automática operando las 24 horas al día."
+    images={[
+      "imagenes/whatsapp-bot/imagen-whatsapp-bot-1.png",
+      "imagenes/whatsapp-bot/imagen-whatsapp-bot-2.png",
+      "imagenes/whatsapp-bot/imagen-whatsapp-bot-3.png",
+    ]}
+    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    align="left"
+  />
+
+    <section class="sm:mt-32 mt-16 px-4">
+        <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
+        <span class="text-naranja">Características</span> WhatsApp Bot
+        </h2>
+
+        <div
+        class="flex flex-col md:flex-row items-center justify-between max-w-[90%] md:max-w-[70%] mx-auto mt-20 gap-16 md:gap-10"
+        >
+        <!-- IMAGEN + CÍRCULOS DECORATIVOS -->
+        <div class="relative w-full md:w-1/2 flex justify-center">
+            <Image
+            src={imagenCaracteristicas}
+            alt="Imagen de características"
+            class="max-w-full"
+            />
+
+            <!-- Círculo 1 -->
+            <div
+            class="absolute bottom-2 right-10 w-20 h-20 rounded-full"
+            style="background: linear-gradient(180deg, #FFA160, #FF6800);"
+            >
+            </div>
+
+            <!-- Círculo 2 -->
+            <div
+            class="absolute top-10 right-0 w-10 h-10 rounded-full"
+            style="background: linear-gradient(180deg, #FFA160, #FF6800);"
+            >
+            </div>
+        </div>
+
+        <!-- LISTADO -->
+        <div class="w-full md:w-1/2 text-lg sm:p-16 p-0">
+            <ul class="text-grisclaro space-y-6">
+            <li>
+                <span class="text-orange-500 font-bold">•</span>
+                Integre nuestro Bot a su sistema CRM o ERP - SIESA, CG1, SAP, CRM, Salesforce,
+                Zoho…
+            </li>
+
+            <li>
+                <span class="text-orange-500 font-bold">•</span>
+                Atienda por videollamada sin instalar aplicaciones y al alcance de un
+                clic desde WhatsApp.
+            </li>
+
+            <li>
+                <span class="text-orange-500 font-bold">•</span>
+                Servicios automáticos (Citas, Solicitudes, Ventas, Reclamos, etc.).
+            </li>
+
+            <li>
+                <span class="text-orange-500 font-bold">•</span>
+                Redirección a asesor humano solo cuando es requerido, con sistema de
+                tickets.
+            </li>
+
+            <li>
+                <span class="text-orange-500 font-bold">•</span>
+                Graba los chats con sus clientes y evita perder conversaciones.
+            </li>
+
+            <li>
+                <span class="text-orange-500 font-bold">•</span>
+                Reciba reportes diarios de todo lo que sucede en el BOT.
+            </li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+        <path
+            fill="#F5F5F5"
+            fill-opacity="1"
+            d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        ></path>
+        </svg>
+
+        <div class="bg-[#F5F5F5] pb-16">
+            <div class="flex sm:flex-row flex-col justify-between sm:max-w-[70%] max-w-[90%] mx-auto gap-12">
+                <div class="sm:max-w-[40%] px-4 sm:pt-0 pt-8 space-y-16 flex flex-col items-center">
+                    <h2
+                        class="text-grisclaro sm:text-5xl sm:text-left text-center text-4xl font-medium leading-tight"
+                    >
+                        <span class="text-naranja">Beneficios</span> de nuestro Robot para WhatsApp
+                    </h2>
+
+                    <ul class="text-grisclaro text-lg space-y-7">
+                        <li>
+                        <span class="text-orange-500">•</span> Gane hasta 3 veces más agilidad
+                        en el proceso de atención al cliente.
+                        </li>
+                        <li>
+                        <span class="text-orange-500">•</span> Reduzca llamadas a asesores
+                        físicos hasta en un 400%.
+                        </li>
+                        <li>
+                        <span class="text-orange-500">•</span> Incremente sus ventas hasta
+                        un 50% más optimizando su capacidad y proporcionando la información
+                        correcta en el momento correcto.
+                        </li>
+                        <li>
+                        <span class="text-orange-500">•</span> No pierdas ninguna conversación
+                        con tus clientes
+                        </li>
+                        <li>
+                        <span class="text-orange-500">•</span> Disponibilidad de servicio 24/7.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                <Image src={imagenRobot} alt={"Imagen de robot chat"} />
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="w-full py-24 bg-gradient-to-b from-naranja to-[#FFA160] text-white">
+        <div class="max-w-5xl mx-auto px-6">
+        <!-- Título -->
+        <h2 class="text-center text-3xl font-medium mb-10">
+            Prueba nuestro Bot de WhatsApp ¡ahora!
+        </h2>
+
+        <!-- Formulario -->
+        <form class="flex flex-col items-center gap-6">
+            <!-- Inputs -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            <div class="flex flex-col">
+                <label class="mb-1 text-sm">Nombre Completo</label>
+                <input
+                type="text"
+                class="rounded-full px-5 py-3 text-black w-full outline-none"
+                />
+            </div>
+
+            <div class="flex flex-col">
+                <label class="mb-1 text-sm">Sector</label>
+                <input
+                type="text"
+                class="rounded-full px-5 py-3 text-black w-full outline-none"
+                />
+            </div>
+
+            <div class="flex flex-col">
+                <label class="mb-1 text-sm">Teléfono</label>
+                <input
+                type="text"
+                class="rounded-full px-5 py-3 text-black w-full outline-none"
+                />
+            </div>
+            </div>
+
+            <!-- Checkbox + Botón -->
+            <div class="flex flex-col md:flex-row items-center gap-4">
+            <!-- Checkbox -->
+            <label class="flex items-center gap-2 text-sm text-white">
+                <input type="checkbox" class="" />
+                Acepto recibir el DEMO vía WhatsApp al número registrado.
+            </label>
+
+            <!-- Botón -->
+            <button
+                type="submit"
+                class="bg-gris hover:bg-gray-900 text-white px-6 py-2 rounded-md transition"
+            >
+                Probar
+            </button>
+            </div>
+        </form>
+        </div>
+    </section>
+
+  <section>
+    <h2
+      class="text-grisclaro sm:text-5xl text-4xl font-medium text-center sm:mt-36 mt-20"
+    >
+      Casos de <span class="text-naranja">éxito</span>
+    </h2>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+      <path
+        fill="#FFDDC5"
+        fill-opacity="1"
+        d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
+    </svg>
+
+    <div class="bg-gradient-to-b from-[#FFDDC5] to-white">
+      <div class="flex flex-col sm:max-w-[40%] max-w-[80%] mx-auto">
+        <div class="flex flex-col items-center gap-12">
+          <img
+            src="../public/imagenes/whatsapp-bot/cosmoagro-caso.png"
+            alt="Logotipo Balinera S.A"
+            class="w-40"
+          />
+          <p class="text-grisclaro text-lg">
+            En Cosmoagro S.A se integró el Bot WhatsApp con el sistema interno
+            de la compañía, permitiendo gestionar clientes potenciales y
+            entregando a los clientes existentes, informacion importante de
+            forma automatica sin intervencion humana. El Bot cuenta con
+            redireccion a un Asesor en caso de consultas especificas
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center my-24">
+      <Boton text="Contáctanos" />
+    </div>
+  </section>
+</Layout>
