@@ -100,19 +100,19 @@
         class="w-full flex items-center justify-center gap-2 px-4 py-2 hover:bg-gray-100 transition-colors font-medium"
       >
         Soluciones
-        <svg
-          id="mobile-solutions-icon"
-          class="w-4 h-4 transition-transform"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+          <svg
+            id="mobile-solutions-icon"
+            class="w-4 h-4 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
       </button>
 
       <div id="mobile-solutions-dropdown" class="hidden flex-col bg-gray-50">
@@ -128,7 +128,7 @@
     <a href="../integraciones.html" class="transition-colors hover:text-naranja py-2"
       >Integraciones</a
     >
-    <a href="#" class="transition-colors hover:text-naranja py-2"
+    <a href="../casos-de-exito.html" class="transition-colors hover:text-naranja py-2"
       >Casos de éxito</a
     >
     <a href="#" class="transition-colors hover:text-naranja py-2">
@@ -149,8 +149,9 @@
   const mobileSolutionsIcon = document.getElementById("mobile-solutions-icon");
 
 
-  // EFECTO SCROLL
+  // Efecto scroll
   window.addEventListener("scroll", () => {
+    const logo = document.getElementById("logo") as HTMLImageElement;
     if (!navbar || !navMenu || !menuIcon || !logo) return;
 
     const scrollActive = window.scrollY > 50;
@@ -163,22 +164,20 @@
 
     menuIcon.classList.toggle("text-white", !scrollActive);
     menuIcon.classList.toggle("text-black", scrollActive);
-
     logo.src = scrollActive ? "/logo-agil3-2.svg" : "/logo-agil3-1.svg";
   });
 
-  // MENÚ HAMBURGUESA
+  // Menu hamburguesa
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", () => {
       const isHidden = mobileMenu.classList.contains("hidden");
 
-      // Solo usamos hidden → Tailwind maneja el display
       mobileMenu.classList.toggle("hidden", !isHidden);
       mobileMenu.classList.toggle("flex", isHidden);
     });
   }
 
-  // DROPDOWN SOLUCIONES EN MÓVIL
+  // Dropdwon soluciones movil
   if (mobileSolutionsToggle && mobileSolutionsDropdown && mobileSolutionsIcon) {
     mobileSolutionsToggle.addEventListener("click", () => {
       const isHidden = mobileSolutionsDropdown.classList.contains("hidden");
