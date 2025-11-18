@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeaderPaginas from "../components/HeaderPaginas.astro";
+import Boton from "../components/Boton.astro";
+import { Image } from "astro:assets";
+import logoImpormedical from "/src/assets/casos-de-exito-2/impormedical-logo.png";
+import logoAsocana from "/src/assets/casos-de-exito-2/asocana-logo.png";
+import logoJaponesa from "/src/assets/casos-de-exito-2/electrojaponesa-logo.png";
+import logoImecol from "/src/assets/casos-de-exito-2/imecol-logo.png";
+import logoCosmoagro from "/src/assets/casos-de-exito-2/cosmoagro-logo.png";
+import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
+---
+
+<Layout>
+  <HeaderPaginas
+    title="Casos de Éxito"
+    description="En Agil3 transformamos desafíos en resultados reales. Cada proyecto refleja nuestro compromiso con la innovación, la eficiencia y el crecimiento de nuestros clientes."
+    images={[
+      "../src/assets/casos-de-exito-2/casos-imagen-1.png",
+      "../src/assets/casos-de-exito-2/casos-imagen-2.png",
+      "../src/assets/casos-de-exito-2/casos-imagen-3.png",
+    ]}
+    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    align="left"
+  />
+
+  <section>
+    <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-24">
+      ¿Casos reales, <span class="text-naranja">resultados</span> comprobados
+    </h2>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" class="sm:-mt-12">
+      <path
+        fill="#F5F5F5"
+        fill-opacity="1"
+        d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
+    </svg>
+
+
+    <div class="bg-[#F5F5F5]">
+      <div
+        class="grid sm:grid-cols-3 grid-cols-1 place-items-center mx-auto max-w-[75%] gap-8"
+      >
+        <div><Image src={logoImpormedical} alt={"Logo Impormedical"} class="transition-transform duration-300 hover:scale-105"/></div>
+        <div><Image src={logoAsocana} alt={"Logo Asocana"} class="transition-transform duration-300 hover:scale-105" /></div>
+        <div><Image src={logoJaponesa} alt={"Logo Electro Japonesa"} class="transition-transform duration-300 hover:scale-105" /></div>
+        <div><Image src={logoImecol} alt={"Logo Imecol"} class="transition-transform duration-300 hover:scale-105"/></div>
+        <div><Image src={logoCosmoagro} alt={"Logo Cosmoagro"} class="transition-transform duration-300 hover:scale-105" /></div>
+        <div><Image src={logoFianza} alt={"Logo Fianza"} class="transition-transform duration-300 hover:scale-105" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="bg-gradient-to-b from-[#F5F5F5] to-[#FFD9BF] flex flex-col items-center sm:py-52 py-24 space-y-12"
+    >
+      <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
+        <span class="text-naranja">Conviértete</span> en la próxima historia de éxito.
+      </h2>
+
+      <Boton text="Contáctanos" />
+    </div>
+  </section>
+</Layout>
