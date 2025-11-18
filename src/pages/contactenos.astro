@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import contactenosImagen from "/src/assets/contactenos/contactenos-imagen-1.png"
+---
+
+<Layout>
+  <div class="bg-gradient-to-br from-orange-300 to-naranja py-24 text-center">
+    <h1 class="text-5xl font-medium">Estamos listos para ayudarte a crecer</h1>
+    <p class="text-2xl max-w-[10%]">
+      Cuéntanos sobre los retos y objetivos de tu empresa. Nuestro equipo está
+      listo para asesorarte y construir juntos la solución tecnológica que
+      impulse tu crecimiento.
+    </p>
+  </div>
+
+  <section class="flex">
+
+    <div class="relative w-full md:w-1/2 flex justify-center">
+            <Image
+            src={contactenosImagen}
+            alt="Imagen de características"
+            class="max-w-full"
+            />
+        </div>
+
+
+    <div>
+      <form class="space-y-4 max-w-3xl mx-auto" id="contactForm">
+        <!-- Nombre -->
+        <div>
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Nombre"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+        </div>
+
+        <!-- Celular y Empresa -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="tel"
+            name="celular"
+            placeholder="Celular"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+          <input
+            type="text"
+            name="empresa"
+            placeholder="Empresa"
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+          />
+        </div>
+
+        <!-- Mensaje -->
+        <div>
+          <textarea
+            name="mensaje"
+            placeholder="Mensaje"
+            rows="4"
+            required
+            class="w-full px-6 py-4 bg-[#E8E8E8] rounded-2xl text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all resize-none"
+          ></textarea>
+        </div>
+
+        <!-- reCAPTCHA -->
+        <div class="flex justify-start">
+          <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+
+      <!-- Mensaje de éxito/error -->
+      <div id="formMessage" class="mt-6 hidden">
+        <div class="p-4 rounded-lg text-center font-medium"></div>
+      </div>
+    </div>
+  </section>
+</Layout>
