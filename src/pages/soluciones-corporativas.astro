@@ -6,6 +6,8 @@ import Boton from "../components/Boton.astro";
 ---
 
 <Layout>
+
+  <!--Componenete Header inicial -->
   <HeaderPaginas
     title="Soluciones Corporativas"
     description="Somos expertos en implementación de soluciones corporativas, utilizamos la tecnología para aumentar la productividad de las empresas, optimizando sus procesos internos a través de soluciones de software personalizadas o adaptación de aplicaciones existentes."
@@ -17,12 +19,16 @@ import Boton from "../components/Boton.astro";
     backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
     align="left"
   />
+  
+  <!--Inicio seccion-->
+  <section class="md:mt-32 mt-24">
 
-  <section class="mt-32">
+    <!--Titulo-->
     <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
       Nuestras <span class="text-naranja">soluciones</span>
     </h2>
 
+    <!--Tarjeta Aplicaciones moviles y web -->
     <TarjetaSoluciones
       badge="PWA's"
       title="Aplicaciones Moviles y Web"
@@ -32,7 +38,8 @@ import Boton from "../components/Boton.astro";
       image="../src/assets/tarjetas/imagen-tarjeta-1.png"
       buttonLabel="Más Información"
     />
-
+    
+    <!--Tarjeta Deparmentos comerciales -->
     <TarjetaSoluciones
       badge="Para departamentos comerciales"
       title="Portal de Pedidos"
@@ -44,7 +51,8 @@ import Boton from "../components/Boton.astro";
       image="../src/assets/tarjetas/imagen-tarjeta-2.png"
       buttonLabel="Más Información"
     />
-
+    
+    <!--Tarjeta Compras y Logistica -->
     <TarjetaSoluciones
       badge="Compras y logística"
       title="Portal de Gestión de Compras"
@@ -59,14 +67,16 @@ import Boton from "../components/Boton.astro";
       buttonLabel="Más Información"
     />
   </section>
-
+  
+  <!--Inicio seccion casos de exito -->
   <section>
-    <h2
-      class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-36"
-    >
+
+    <!--Titulo-->
+    <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-36">
       Casos de <span class="text-naranja">éxito</span>
     </h2>
 
+    <!--Curva circular-->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
       <path
         fill="#FFDDC5"
@@ -75,10 +85,12 @@ import Boton from "../components/Boton.astro";
       ></path>
     </svg>
 
+    <!--Contenedor-->
     <div class="bg-gradient-to-b from-[#FFDDC5] to-white">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 items-stretch sm:max-w-5xl max-w-[90%] mx-auto"
       >
+        <!--Caso 1-->
         <div
           class="flex flex-col items-center sm:border-r-2 border-naranja sm:pr-24 md:px-16 gap-12"
         >
@@ -96,6 +108,7 @@ import Boton from "../components/Boton.astro";
           </p>
         </div>
 
+        <!--Caso 2-->
         <div class="flex flex-col items-center sm:pl-24 md:px-16 gap-12 mt-16 lg:mt-0 md:mt-16">
           <img
             src="../src/assets/casos-de-exito/asocana-caso.png"
@@ -113,8 +126,10 @@ import Boton from "../components/Boton.astro";
       </div>
     </div>
 
+    <!--Boton-->
     <div class="flex items-center justify-center md:my-40 my-24">
       <Boton text="Contáctanos" />
     </div>
+    
   </section>
 </Layout>
