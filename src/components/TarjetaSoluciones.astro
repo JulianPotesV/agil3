@@ -30,11 +30,12 @@ const {
           </span>
         </div>
       )}
-
+      <!-- Titulo -->
       <h2 class="text-3xl lg:text-4xl font-medium text-grisclaro">
         {title}
       </h2>
 
+      <!-- Parrafo -->
       <div class="space-y-4">
         {description.map((paragraph) => (
           <p class="text-grisclaro leading-relaxed text-lg">
@@ -43,6 +44,7 @@ const {
         ))}
       </div>
 
+      <!-- Boton -->
       <div class="pt-2">
         <Boton text={buttonLabel} />
       </div>
