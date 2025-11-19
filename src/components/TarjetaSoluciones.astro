@@ -20,6 +20,7 @@ const {
 
 <div class="bg-[#F5F5F5] rounded-lg overflow-hidden sm:max-w-[75%] max-w-[90%] items-center mx-auto my-12 shadow-md">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+    
     <!-- Contenido izquierdo -->
     <div class="flex flex-col gap-8 sm:py-16 sm:pl-16 p-8 ">
       {badge && (
@@ -52,7 +53,7 @@ const {
       <img 
         src={image} 
         alt={title}
-        class="w-full max-w-sm h-full sm:rounded-tr-2xl sm:rounded-br-2xl shadow-lg object-cover"
+        class="w-full lg:max-w-sm h-full md:w-full object-cover sm:rounded-tr-2xl sm:rounded-br-2xl md:rounded-none shadow-lg"
       />
     </div>
   </div>
