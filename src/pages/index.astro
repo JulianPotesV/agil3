@@ -2,11 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import Carrusel from "../components/Carrusel.astro";
-import equipo from "../assets/equipo-de-trabajo.png";
-import equipo2 from "../assets/equipo-de-trabajo-2.png";
-import codigo from "../assets/codigo.png";
+import equipo from "../assets/home/equipo-de-trabajo.png";
+import equipo2 from "../assets/home/equipo-de-trabajo-2.png";
+import codigo from "../assets/home/codigo.png";
 import { Image } from "astro:assets";
-import heroImg from "../assets/imagen-hero-1.jpg";
+import heroImg from "../assets/home/imagen-hero-1.jpg";
 
 const empresas = [
   {
@@ -46,6 +46,7 @@ const empresas = [
   <!-- Hero Section -->
 
   <section class="relative text-white">
+
     <!-- Imagen optimizada por Astro -->
     <Image
       src={heroImg}
@@ -86,7 +87,6 @@ const empresas = [
   </section>
 
   <!-- Titulo "¿Listo para transformar su empresa?" -->
-
   <section class="xl:pl-0 p-8">
     <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
       ¿Listo para <span class="text-naranja">transformar</span> su empresa?
@@ -105,7 +105,6 @@ const empresas = [
   </svg>
 
   <!-- Sección de servicios -->
-
   <section class="bg-[#F5F5F5] px-6 md:px-20 lg:px-40 xl:px-80">
     <div
       class="grid gap-12 md:gap-16 lg:gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-grisclaro"
@@ -166,18 +165,15 @@ const empresas = [
   </section>
 
   <!-- puntos decorativos -->
-
   <section class="flex items-center justify-center bg-[#F5F5F5]">
     <img src="/puntos.svg" alt="puntos decorativos" class="my-32" />
   </section>
 
   <!-- Sección arquitecturas -->
-
   <section
     class="bg-gradient-to-b from-[#F5F5F5] to-[#FFFFFF] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-28 px-8 md:px-16 lg:px-40 relative sm:pb-60 pb-40"
   >
     <!-- Texto -->
-
     <div class="border-l-4 border-naranja pl-6 md:w-1/2">
       <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium leading-tight">
         Somos <span class="text-naranja">expertos</span><br />
@@ -192,7 +188,6 @@ const empresas = [
     </div>
 
     <!-- Logos -->
-
     <div class="mt-16 sm:mt-0">
       <img
         src="/tecnologias.svg"
@@ -211,7 +206,6 @@ const empresas = [
   </section>
 
   <!-- Sección testimonios -->
-
   <section class="bg-gradient-to-b from-[#FFD4B6] to-[#FFFFFF] xl:pl-0 p-10">
     <h2
       class="text-grisclaro sm:text-5xl text-4xl font-medium text-center pt-16"
@@ -233,16 +227,16 @@ const empresas = [
   <!-- Testimonios de clientes-->
   <section>
     <div
-      class="full-w mx-auto flex flex-col md:flex-row items-center sm:gap-20 mt-20"
+      class="full-w mx-auto flex flex-col md:flex-col lg:flex-row items-center sm:gap-20 mt-20"
     >
       <!-- Imagen -->
-      <div class="md:w-2/6 relative">
+      <div class="md:w-[2/6] relative">
         <Image
           src={equipo}
           alt="Equipo trabajando"
-          class="sm:rounded-tr-2xl sm:rounded-br-2xl shadow-md"
+          class="sm:rounded-tr-2xl sm:rounded-br-2xl md:rounded-2xl shadow-md"
         />
-
+  
         <!-- Puntos decorativos -->
         <div
           class="absolute top-0 left-0 w-20 h-20 bg-orange-400 rounded-full -translate-x-4 -translate-y-4"
@@ -255,7 +249,7 @@ const empresas = [
       </div>
 
       <!-- Contenido -->
-      <div class="md:w-3/5 xl:pr-60 xl:pl-0 p-10">
+      <div class="lg:w-3/5 xl:pr-60 xl:pl-0 p-10">
         <h2 class="sm:text-5xl text-4xl font-medium text-grisclaro">
           Empresas líderes <span class="text-orange-500">confían</span> en nosotros
         </h2>
@@ -266,17 +260,13 @@ const empresas = [
         </p>
 
         <!-- Grid de empresas -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {
             empresas.map((empresa) => (
               <div
                 class={`bg-white shadow-md rounded-xl p-6 border hover:shadow-lg transition border-transparent"}`}
               >
-                <img
-                  src={empresa.logo}
-                  alt={empresa.nombre}
-                  class="w-16h-auto mb-4 mx-auto"
-                />
+                <img src={empresa.logo} alt={empresa.nombre} class="mx-auto" />
                 <p class="text-sm text-gray-600 mb-3 text-center">
                   {empresa.texto}
                 </p>
@@ -293,7 +283,7 @@ const empresas = [
 
   <!-- Sección contactanos -->
   <section
-    class="relative bg-gradient-to-b from-naranja to-[#FFA160] text-white mt-60 py-[80px]"
+    class="relative bg-gradient-to-b from-naranja to-[#FFA160] text-white sm:mt-60 mt-16 py-[80px]"
   >
     <div
       class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6"
@@ -317,7 +307,7 @@ const empresas = [
 
       <!-- Imágenes -->
       <div
-        class="absolute right-80 bottom-10 flex items-center justify-center w-full md:w-auto"
+        class="sm:absolute sm:right-80 sm:bottom-10 -space-x-4 sm:mt-10 mt-10 flex items-center justify-center w-full md:w-auto"
       >
         <!-- Imagen principal -->
         <div
@@ -332,7 +322,7 @@ const empresas = [
 
         <!-- Imagen secundaria -->
         <div
-          class="absolute -bottom-32 -right-10 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg"
+          class="sm:absolute -bottom-32 -right-10 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg"
         >
           <Image
             src={codigo}
@@ -362,7 +352,7 @@ const empresas = [
           >crecer</span
         >
       </h2>
-
+      <!-- formulario de contacto -->
       <form class="space-y-4 max-w-3xl mx-auto" id="contactForm">
         <!-- Nombre -->
         <div>
