@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import HeaderPaginas from "../components/HeaderPaginas.astro";
 import Boton from "../components/Boton.astro";
 import { Image } from "astro:assets";
+
+//Imports de las rutas para usarlas en el componente <Image>
 import logoImpormedical from "/src/assets/casos-de-exito-2/impormedical-logo.png";
 import logoAsocana from "/src/assets/casos-de-exito-2/asocana-logo.png";
 import logoJaponesa from "/src/assets/casos-de-exito-2/electrojaponesa-logo.png";
@@ -12,6 +14,7 @@ import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
 ---
 
 <Layout>
+  <!--Componenete header -->
   <HeaderPaginas
     title="Casos de Éxito"
     description="En Agil3 transformamos desafíos en resultados reales. Cada proyecto refleja nuestro compromiso con la innovación, la eficiencia y el crecimiento de nuestros clientes."
@@ -24,12 +27,23 @@ import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
     align="left"
   />
 
+  <!-- Inicio seccion -->
   <section>
-    <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-24">
-      Casos reales, <span class="text-naranja">resultados</span> comprobados
-    </h2>
+    <!-- Titulo -->
+    <div class="flex max-w-3xl lg:max-w-full md:mx-auto justify-center lg:mb-0 md:mb-16 mb-4 mx-4">
+      <h2
+        class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-24"
+      >
+        Casos reales, <span class="text-naranja">resultados</span> comprobados
+      </h2>
+    </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" class="sm:-mt-12">
+    <!-- Curva circular -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 200"
+      class="sm:-mt-12"
+    >
       <path
         fill="#F5F5F5"
         fill-opacity="1"
@@ -37,17 +51,52 @@ import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
       ></path>
     </svg>
 
-
     <div class="bg-[#F5F5F5]">
       <div
-        class="grid sm:grid-cols-3 grid-cols-1 place-items-center mx-auto max-w-[75%] gap-8"
+        class="grid sm:grid-cols-3 grid-cols-1 place-items-center mx-auto max-w-[75%] lg:md:gap-8 md:gap-4 gap-8 md:pt-0 pt-8"
       >
-        <div><Image src={logoImpormedical} alt={"Logo Impormedical"} class="transition-transform duration-300 hover:scale-105"/></div>
-        <div><Image src={logoAsocana} alt={"Logo Asocana"} class="transition-transform duration-300 hover:scale-105" /></div>
-        <div><Image src={logoJaponesa} alt={"Logo Electro Japonesa"} class="transition-transform duration-300 hover:scale-105" /></div>
-        <div><Image src={logoImecol} alt={"Logo Imecol"} class="transition-transform duration-300 hover:scale-105"/></div>
-        <div><Image src={logoCosmoagro} alt={"Logo Cosmoagro"} class="transition-transform duration-300 hover:scale-105" /></div>
-        <div><Image src={logoFianza} alt={"Logo Fianza"} class="transition-transform duration-300 hover:scale-105" /></div>
+        <div>
+          <Image
+            src={logoImpormedical}
+            alt={"Logo Impormedical"}
+            class="transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div>
+          <Image
+            src={logoAsocana}
+            alt={"Logo Asocana"}
+            class="transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div>
+          <Image
+            src={logoJaponesa}
+            alt={"Logo Electro Japonesa"}
+            class="transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div>
+          <Image
+            src={logoImecol}
+            alt={"Logo Imecol"}
+            class="transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div>
+          <Image
+            src={logoCosmoagro}
+            alt={"Logo Cosmoagro"}
+            class="transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div>
+          <Image
+            src={logoFianza}
+            alt={"Logo Fianza"}
+            class="transition-transform duration-300 hover:scale-105"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -56,9 +105,11 @@ import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
     <div
       class="bg-gradient-to-b from-[#F5F5F5] to-[#FFD9BF] flex flex-col items-center sm:py-52 py-24 space-y-12"
     >
-      <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
-        <span class="text-naranja">Conviértete</span> en la próxima historia de éxito.
-      </h2>
+      <div class="flex max-w-2xl lg:max-w-full mx-auto justify-center lg:mb-0 mb-16">
+        <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
+          <span class="text-naranja">Conviértete</span> en la próxima historia de éxito.
+        </h2>
+      </div>
 
       <Boton text="Contáctanos" />
     </div>

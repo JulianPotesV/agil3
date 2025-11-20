@@ -36,100 +36,101 @@ import Boton from "../components/Boton.astro";
   <section class="flex flex-col items-center">
 
     <!-- Titulo-->
-    <h2
-      class="text-grisclaro sm:text-5xl text-4xl font-medium text-center sm:mt-24 mt-16 mb-4 max-w-[85%]"
-    >
-      Plataformas <span class="text-naranja">Integradas</span>
-    </h2>
+      <h2
+        class="text-grisclaro sm:text-5xl text-4xl font-medium text-center sm:mt-24 mt-16 mb-4 max-w-[85%]"
+      >
+        Plataformas <span class="text-naranja">Integradas</span>
+      </h2>
 
-    <!-- Parrafo-->
-    <p
-      class="text-grisclaro sm:text-2xl text-lg sm:text-center mt-4 sm:max-w-[60%] max-w-[85%]"
-    >
-      En Agil3 tenemos la capacidad de interconectar diversas fuentes de datos,
-      cualquiera de estos sistemas (entre otros) pueden convertirse en origen o
-      destino de información
-    </p>
+      <!-- Parrafo-->
+      <p
+        class="text-grisclaro sm:text-2xl text-lg sm:text-center mt-4 sm:max-w-[60%] max-w-[85%]"
+      >
+        En Agil3 tenemos la capacidad de interconectar diversas fuentes de datos,
+        cualquiera de estos sistemas (entre otros) pueden convertirse en origen o
+        destino de información
+      </p>
 
-    <!-- Cuadro con los logos de las integraciones-->
-    <div
-      class="flex sm:flex-row flex-col bg-gradient-to-b from-[#FFECDF] to-[#FFC69F]
-                    rounded-2xl sm:p-16 px-4 py-16 sm:space-x-24 sm:space-y-0 space-y-16 sm:mt-16 mt-8 max-w-[95%]"
-    >
-      <div class="space-y-4 flex flex-col">
+      <!-- Cuadro con los logos de las integraciones-->
+      <div
+        class="flex sm:flex-row flex-col bg-gradient-to-b from-[#FFECDF] to-[#FFC69F]
+                      rounded-2xl sm:p-16 px-4 py-16 sm:space-x-24 sm:space-y-0 space-y-16 sm:mt-16 mt-8 max-w-[95%]"
+      >
+        <div class="space-y-4 flex flex-col">
 
-        <!-- Titulo -->
-        <h2 class="text-4xl text-grisclaro font-medium text-center">
-          Servicios
-        </h2>
+          <!-- Titulo -->
+          <h2 class="text-4xl text-grisclaro font-medium text-center">
+            Servicios
+          </h2>
 
-        <!-- Linea decoracion -->
-        <img
-          src="../src/assets/integraciones/icono-linea.svg"
-          alt="Linea grafica"
-          class="h-16"
-        />
+          <!-- Linea decoracion -->
+          <img
+            src="../src/assets/integraciones/icono-linea.svg"
+            alt="Linea grafica"
+            class="h-16"
+          />
 
-        <!-- Logos integraciones -->
-        <div class="max-w-7xl mx-auto grid gap-6">
+          <!-- Logos integraciones -->
+          <div class="max-w-7xl mx-auto grid gap-6">
 
-          <!-- Primera fila: 2 columnas grandes -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Primera fila: 2 columnas grandes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <div id="cuadro-logos" class="bg-white p-8 rounded-lg flex items-center justify-center">
-              <Image src={logoSiesa} alt={"Logotipo Siesa"} class="" />
+              <div id="cuadro-logos" class="bg-white p-8 rounded-lg flex items-center justify-center">
+                <Image src={logoSiesa} alt={"Logotipo Siesa"} class="" />
+              </div>
+
+              <div id="cuadro-logos" class="bg-white p-8 rounded-lg flex items-center justify-center">
+                <Image src={logoSap} alt={"Logotipo Sap"} />
+              </div>
+
             </div>
 
-            <div id="cuadro-logos" class="bg-white p-8 rounded-lg flex items-center justify-center">
-              <Image src={logoSap} alt={"Logotipo Sap"} />
+            <!-- Segunda fila: 4 columnas -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoHubspot} alt={"Logotipo Siesa"} />
+              </div>
+
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoShopify} alt={"Logotipo Siesa"} />
+              </div>
+
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoAws} alt={"Logotipo Siesa"} />
+              </div>
+
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoDynamics} alt={"Logotipo Siesa"} />
+              </div>
+
             </div>
 
-          </div>
+            <!-- Tercera fila: 4 columnas -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-          <!-- Segunda fila: 4 columnas -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoTusdatos} alt={"Logotipo Siesa"} />
+              </div>
 
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoHubspot} alt={"Logotipo Siesa"} />
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoTransunion} alt={"Logotipo Siesa"} />
+              </div>
+
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoDatacredito} alt={"Logotipo Siesa"} />
+              </div>
+
+              <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
+                <Image src={logoProtecdata} alt={"Logotipo Siesa"} />
+              </div>
+
             </div>
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoShopify} alt={"Logotipo Siesa"} />
-            </div>
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoAws} alt={"Logotipo Siesa"} />
-            </div>
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoDynamics} alt={"Logotipo Siesa"} />
-            </div>
-
-          </div>
-
-          <!-- Tercera fila: 4 columnas -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoTusdatos} alt={"Logotipo Siesa"} />
-            </div>
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoTransunion} alt={"Logotipo Siesa"} />
-            </div>
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoDatacredito} alt={"Logotipo Siesa"} />
-            </div>
-
-            <div id="cuadro-logos" class="bg-white p-6 rounded-lg flex items-center justify-center">
-              <Image src={logoProtecdata} alt={"Logotipo Siesa"} />
-            </div>
-
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Curva circular -->
     <section>
@@ -210,7 +211,7 @@ import Boton from "../components/Boton.astro";
       <!--Contenedor casos de exito -->
       <div class="bg-gradient-to-b from-[#FFDDC5] to-white">
         <div
-          class="grid grid-cols-1 lg:grid-cols-2 items-stretch sm:max-w-5xl max-w-[90%] mx-auto"
+          class="grid grid-cols-1 lg:grid-cols-2 items-stretch lg:max-w-7xl max-w-[90%] mx-auto"
         >
           <!--Caso 1-->
           <div
