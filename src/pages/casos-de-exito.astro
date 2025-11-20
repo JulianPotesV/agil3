@@ -1,4 +1,5 @@
 ---
+// Imports de los componentes usados en la pagina
 import Layout from "../layouts/Layout.astro";
 import HeaderPaginas from "../components/HeaderPaginas.astro";
 import Boton from "../components/Boton.astro";
@@ -11,6 +12,9 @@ import logoJaponesa from "/src/assets/casos-de-exito-2/electrojaponesa-logo.png"
 import logoImecol from "/src/assets/casos-de-exito-2/imecol-logo.png";
 import logoCosmoagro from "/src/assets/casos-de-exito-2/cosmoagro-logo.png";
 import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
+
+// Import del modal
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
 ---
 
 <Layout>
@@ -30,7 +34,9 @@ import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
   <!-- Inicio seccion -->
   <section>
     <!-- Titulo -->
-    <div class="flex max-w-3xl lg:max-w-full md:mx-auto justify-center lg:mb-0 md:mb-16 mb-4 mx-4">
+    <div
+      class="flex max-w-3xl lg:max-w-full md:mx-auto justify-center lg:mb-0 md:mb-16 mb-4 mx-4"
+    >
       <h2
         class="text-grisclaro sm:text-5xl text-4xl font-medium text-center mt-24"
       >
@@ -55,59 +61,258 @@ import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
       <div
         class="grid sm:grid-cols-3 grid-cols-1 place-items-center mx-auto max-w-[75%] lg:md:gap-8 md:gap-4 gap-8 md:pt-0 pt-8"
       >
-        <div>
+        <div class="cursor-pointer">
           <Image
             src={logoImpormedical}
             alt={"Logo Impormedical"}
             class="transition-transform duration-300 hover:scale-105"
+            data-modal-trigger="modal-impormedical"
           />
         </div>
-        <div>
+        <div class="cursor-pointer">
           <Image
             src={logoAsocana}
             alt={"Logo Asocana"}
             class="transition-transform duration-300 hover:scale-105"
+            data-modal-trigger="modal-asocana"
           />
         </div>
-        <div>
+        <div class="cursor-pointer">
           <Image
             src={logoJaponesa}
             alt={"Logo Electro Japonesa"}
             class="transition-transform duration-300 hover:scale-105"
+            data-modal-trigger="modal-japonesa"
           />
         </div>
-        <div>
+        <div class="cursor-pointer">
           <Image
             src={logoImecol}
             alt={"Logo Imecol"}
             class="transition-transform duration-300 hover:scale-105"
+            data-modal-trigger="modal-imecol"
           />
         </div>
-        <div>
+        <div class="cursor-pointer">
           <Image
             src={logoCosmoagro}
             alt={"Logo Cosmoagro"}
             class="transition-transform duration-300 hover:scale-105"
+            data-modal-trigger="modal-cosmoagro"
           />
         </div>
-        <div>
+        <div class="cursor-pointer">
           <Image
             src={logoFianza}
             alt={"Logo Fianza"}
             class="transition-transform duration-300 hover:scale-105"
+            data-modal-trigger="modal-fianza"
           />
         </div>
       </div>
     </div>
+
+    <!--------------------------------------------------------Modales -------------------------------------------------------->
+
+    <!--Modal impormedical -->
+    <Modal id="modal-impormedical">
+
+      <!--Titulo Modal-->
+      <ModalHeader>
+        <h4 class="text-xl font-bold">Caso de éxito Impormedical</h4>
+      </ModalHeader>
+
+      <!--Parrafos-->
+      <ModalBody>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie elit orci, 
+          et ullamcorper lorem posuere vitae. Pellentesque ac orci et quam pharetra porta non vel diam. 
+          Morbi sapien elit, ultricies interdum mi ut, tincidunt ornare tortor. Donec quis nisi posuere,
+          ornare nisi a, porttitor quam. Donec et nisi sed urna euismod pellentesque et eu urna. Nam venenatis
+          nec metus vitae auctor. Nunc sed ante quis sem cursus iaculis. Aliquam erat volutpat. Nullam ultrices
+          pharetra semper. Nam nec lacinia risus. Sed fringilla nunc sollicitudin vestibulum interdum. <br><br>
+
+          Vestibulum dapibus vulputate orci. Suspendisse egestas, metus nec hendrerit venenatis, orci tortor
+          lacinia leo, non faucibus ipsum erat id sem. Vestibulum eget mauris feugiat, dictum erat id, consequat
+          sem. Etiam in scelerisque nunc. Aliquam commodo metus eros, quis molestie erat tempor eget. Nulla facilisi.
+          Aliquam in ex vel est fermentum finibus sit amet vel ex. Praesent suscipit posuere mauris cursus commodo. 
+          Mauris at tristique ipsum. Nullam vel magna et tellus eleifend facilisis.</p>
+      </ModalBody>
+      <ModalFooter>
+
+        <!--Boton cerrar -->
+        <Button label="Cerrar" Button dark' variant='dark' data-modal-close />
+      </ModalFooter>
+    </Modal>
+
+
+    <!--Modal Asocaña -->
+    <Modal id="modal-asocana">
+
+      <!--Titulo Modal-->
+      <ModalHeader>
+        <h4 class="text-xl font-bold">Caso de éxito Asocaña</h4>
+      </ModalHeader>
+
+      <!--Parrafos-->
+      <ModalBody>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie elit orci, 
+          et ullamcorper lorem posuere vitae. Pellentesque ac orci et quam pharetra porta non vel diam. 
+          Morbi sapien elit, ultricies interdum mi ut, tincidunt ornare tortor. Donec quis nisi posuere,
+          ornare nisi a, porttitor quam. Donec et nisi sed urna euismod pellentesque et eu urna. Nam venenatis
+          nec metus vitae auctor. Nunc sed ante quis sem cursus iaculis. Aliquam erat volutpat. Nullam ultrices
+          pharetra semper. Nam nec lacinia risus. Sed fringilla nunc sollicitudin vestibulum interdum. <br><br>
+
+          Vestibulum dapibus vulputate orci. Suspendisse egestas, metus nec hendrerit venenatis, orci tortor
+          lacinia leo, non faucibus ipsum erat id sem. Vestibulum eget mauris feugiat, dictum erat id, consequat
+          sem. Etiam in scelerisque nunc. Aliquam commodo metus eros, quis molestie erat tempor eget. Nulla facilisi.
+          Aliquam in ex vel est fermentum finibus sit amet vel ex. Praesent suscipit posuere mauris cursus commodo. 
+          Mauris at tristique ipsum. Nullam vel magna et tellus eleifend facilisis.</p>
+      </ModalBody>
+      <ModalFooter>
+
+        <!--Boton cerrar -->
+        <Button label="Cerrar" Button dark' variant='dark' data-modal-close />
+      </ModalFooter>
+    </Modal>
+
+
+    <!--Modal Electro Japonesa -->
+    <Modal id="modal-japonesa">
+
+      <!--Titulo Modal-->
+      <ModalHeader>
+        <h4 class="text-xl font-bold">Caso de éxito Electro Japonesa</h4>
+      </ModalHeader>
+
+      <!--Parrafos-->
+      <ModalBody>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie elit orci, 
+          et ullamcorper lorem posuere vitae. Pellentesque ac orci et quam pharetra porta non vel diam. 
+          Morbi sapien elit, ultricies interdum mi ut, tincidunt ornare tortor. Donec quis nisi posuere,
+          ornare nisi a, porttitor quam. Donec et nisi sed urna euismod pellentesque et eu urna. Nam venenatis
+          nec metus vitae auctor. Nunc sed ante quis sem cursus iaculis. Aliquam erat volutpat. Nullam ultrices
+          pharetra semper. Nam nec lacinia risus. Sed fringilla nunc sollicitudin vestibulum interdum. <br><br>
+
+          Vestibulum dapibus vulputate orci. Suspendisse egestas, metus nec hendrerit venenatis, orci tortor
+          lacinia leo, non faucibus ipsum erat id sem. Vestibulum eget mauris feugiat, dictum erat id, consequat
+          sem. Etiam in scelerisque nunc. Aliquam commodo metus eros, quis molestie erat tempor eget. Nulla facilisi.
+          Aliquam in ex vel est fermentum finibus sit amet vel ex. Praesent suscipit posuere mauris cursus commodo. 
+          Mauris at tristique ipsum. Nullam vel magna et tellus eleifend facilisis.</p>
+      </ModalBody>
+      <ModalFooter>
+
+        <!--Boton cerrar -->
+        <Button label="Cerrar" Button dark' variant='dark' data-modal-close />
+      </ModalFooter>
+    </Modal>
+
+
+    <!--Modal Imeco -->
+    <Modal id="modal-imecol">
+
+      <!--Titulo Modal-->
+      <ModalHeader>
+        <h4 class="text-xl font-bold">Caso de éxito Imecol</h4>
+      </ModalHeader>
+
+      <!--Parrafos-->
+      <ModalBody>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie elit orci, 
+          et ullamcorper lorem posuere vitae. Pellentesque ac orci et quam pharetra porta non vel diam. 
+          Morbi sapien elit, ultricies interdum mi ut, tincidunt ornare tortor. Donec quis nisi posuere,
+          ornare nisi a, porttitor quam. Donec et nisi sed urna euismod pellentesque et eu urna. Nam venenatis
+          nec metus vitae auctor. Nunc sed ante quis sem cursus iaculis. Aliquam erat volutpat. Nullam ultrices
+          pharetra semper. Nam nec lacinia risus. Sed fringilla nunc sollicitudin vestibulum interdum. <br><br>
+
+          Vestibulum dapibus vulputate orci. Suspendisse egestas, metus nec hendrerit venenatis, orci tortor
+          lacinia leo, non faucibus ipsum erat id sem. Vestibulum eget mauris feugiat, dictum erat id, consequat
+          sem. Etiam in scelerisque nunc. Aliquam commodo metus eros, quis molestie erat tempor eget. Nulla facilisi.
+          Aliquam in ex vel est fermentum finibus sit amet vel ex. Praesent suscipit posuere mauris cursus commodo. 
+          Mauris at tristique ipsum. Nullam vel magna et tellus eleifend facilisis.</p>
+      </ModalBody>
+      <ModalFooter>
+
+        <!--Boton cerrar -->
+        <Button label="Cerrar" Button dark' variant='dark' data-modal-close />
+      </ModalFooter>
+    </Modal>
+
+
+    <!--Modal Cosmoagro -->
+    <Modal id="modal-cosmoagro">
+
+      <!--Titulo Modal-->
+      <ModalHeader>
+        <h4 class="text-xl font-bold">Caso de éxito Asocaña</h4>
+      </ModalHeader>
+
+      <!--Parrafos-->
+      <ModalBody>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie elit orci, 
+          et ullamcorper lorem posuere vitae. Pellentesque ac orci et quam pharetra porta non vel diam. 
+          Morbi sapien elit, ultricies interdum mi ut, tincidunt ornare tortor. Donec quis nisi posuere,
+          ornare nisi a, porttitor quam. Donec et nisi sed urna euismod pellentesque et eu urna. Nam venenatis
+          nec metus vitae auctor. Nunc sed ante quis sem cursus iaculis. Aliquam erat volutpat. Nullam ultrices
+          pharetra semper. Nam nec lacinia risus. Sed fringilla nunc sollicitudin vestibulum interdum. <br><br>
+
+          Vestibulum dapibus vulputate orci. Suspendisse egestas, metus nec hendrerit venenatis, orci tortor
+          lacinia leo, non faucibus ipsum erat id sem. Vestibulum eget mauris feugiat, dictum erat id, consequat
+          sem. Etiam in scelerisque nunc. Aliquam commodo metus eros, quis molestie erat tempor eget. Nulla facilisi.
+          Aliquam in ex vel est fermentum finibus sit amet vel ex. Praesent suscipit posuere mauris cursus commodo. 
+          Mauris at tristique ipsum. Nullam vel magna et tellus eleifend facilisis.</p>
+      </ModalBody>
+      <ModalFooter>
+
+        <!--Boton cerrar -->
+        <Button label="Cerrar" Button dark' variant='dark' data-modal-close />
+      </ModalFooter>
+    </Modal>
+
+
+    <!--Modal Fianzacredito -->
+    <Modal id="modal-fianza">
+
+      <!--Titulo Modal-->
+      <ModalHeader>
+        <h4 class="text-xl font-bold">Caso de éxito Asocaña</h4>
+      </ModalHeader>
+
+      <!--Parrafos-->
+      <ModalBody>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie elit orci, 
+          et ullamcorper lorem posuere vitae. Pellentesque ac orci et quam pharetra porta non vel diam. 
+          Morbi sapien elit, ultricies interdum mi ut, tincidunt ornare tortor. Donec quis nisi posuere,
+          ornare nisi a, porttitor quam. Donec et nisi sed urna euismod pellentesque et eu urna. Nam venenatis
+          nec metus vitae auctor. Nunc sed ante quis sem cursus iaculis. Aliquam erat volutpat. Nullam ultrices
+          pharetra semper. Nam nec lacinia risus. Sed fringilla nunc sollicitudin vestibulum interdum. <br><br>
+
+          Vestibulum dapibus vulputate orci. Suspendisse egestas, metus nec hendrerit venenatis, orci tortor
+          lacinia leo, non faucibus ipsum erat id sem. Vestibulum eget mauris feugiat, dictum erat id, consequat
+          sem. Etiam in scelerisque nunc. Aliquam commodo metus eros, quis molestie erat tempor eget. Nulla facilisi.
+          Aliquam in ex vel est fermentum finibus sit amet vel ex. Praesent suscipit posuere mauris cursus commodo. 
+          Mauris at tristique ipsum. Nullam vel magna et tellus eleifend facilisis.</p>
+      </ModalBody>
+      <ModalFooter>
+
+        <!--Boton cerrar -->
+        <Button label="Cerrar" Button dark' variant='dark' data-modal-close />
+      </ModalFooter>
+    </Modal>
+
+    <!--------------------------------------------------------Modales -------------------------------------------------------->
+
   </section>
 
   <section>
     <div
       class="bg-gradient-to-b from-[#F5F5F5] to-[#FFD9BF] flex flex-col items-center sm:py-52 py-24 space-y-12"
     >
-      <div class="flex max-w-2xl lg:max-w-full mx-auto justify-center lg:mb-0 mb-16">
+      <div
+        class="flex max-w-2xl lg:max-w-full mx-auto justify-center lg:mb-0 mb-16"
+      >
         <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium text-center">
-          <span class="text-naranja">Conviértete</span> en la próxima historia de éxito.
+          <span class="text-naranja">Conviértete</span> en la próxima historia de
+          éxito.
         </h2>
       </div>
 
