@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Agil3</title>
 
-    <!-- Fuente (tipo de letra)-->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,9 +21,13 @@ import Footer from "../components/Footer.astro";
       rel="stylesheet"
     />
   </head>
+
   <body>
     <Navbar />
     <slot />
     <Footer />
+
+    <!-- Script del cliente -->
+    <script type="module" src="/src/scripts/aos.js"></script>
   </body>
-</html>
+</html

@@ -8,9 +8,9 @@ import contactenosImagen from "/src/assets/contactenos/contactenos-imagen-1.png"
   <div
     class="flex flex-col items-center bg-gradient-to-b from-orange-300 to-naranja pt-40 text-center space-y-8 text-white px-8"
   >
-    <h1 class="md:text-5xl text-4xl  font-medium">Estamos listos para ayudarte a crecer</h1>
+    <h1 class="fade-slide-up md:text-5xl text-4xl  font-medium">Estamos listos para ayudarte a crecer</h1>
 
-    <p class="md:text-2xl text-lg lg:max-w-[50%]  md:max-w-[80%] max-w-[80%] ">
+    <p class="fade-slide-up md:text-2xl text-lg lg:max-w-[50%]  md:max-w-[80%] max-w-[80%] ">
       Cuéntanos sobre los retos y objetivos de tu empresa. Nuestro equipo está
       listo para asesorarte y construir juntos la solución tecnológica que
       impulse tu crecimiento.
@@ -114,3 +114,21 @@ import contactenosImagen from "/src/assets/contactenos/contactenos-imagen-1.png"
 
   <div class="h-24 bg-gradient-to-b from-white to-[#FFD9BF]"></div>
 </Layout>
+
+<style>
+  @keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+</style>

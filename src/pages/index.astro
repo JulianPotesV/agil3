@@ -14,6 +14,7 @@ import logoIncauca from "../assets/home/logo-incauca.png";
 import logoRioPaila from "../assets/home/logo-rio-paila.png";
 import logoVatia from "../assets/home/logo-vatia.png";
 
+// Estructura de datos con la informacion de las empresas para la seccion de testimonios
 const empresas = [
   {
     logo: logoCosmoagro,
@@ -52,7 +53,6 @@ const empresas = [
   <!-- Hero Section -->
 
   <section class="relative text-white">
-
     <!-- Imagen optimizada por Astro -->
     <Image
       src={heroImg}
@@ -66,7 +66,7 @@ const empresas = [
 
     <!-- Contenido del hero -->
     <div
-      class="relative z-20 container mx-auto px-6 sm:px-10 md:px-16 lg:px-40 xl:px-60 2xl:px-80
+      class="fade-slide-up relative z-20 container mx-auto px-6 sm:px-10 md:px-16 lg:px-40 xl:px-60 2xl:px-80
            pt-24 sm:pt-40 md:pt-52 lg:pt-60 pb-24 sm:pb-40 md:pb-60 lg:pb-80 text-center"
     >
       <h1
@@ -117,6 +117,7 @@ const empresas = [
     >
       <!-- Tarjeta 1 -->
       <div
+        data-aos="fade-up"
         class="flex flex-col items-center justify-center text-center gap-4 px-4"
       >
         <img src="/icono-bot.svg" alt="Icono WhatsApp Bot" class="w-20 h-20" />
@@ -132,6 +133,7 @@ const empresas = [
 
       <!-- Tarjeta 2 -->
       <div
+        data-aos="fade-up"
         class="flex flex-col items-center justify-center text-center gap-4 px-4"
       >
         <img
@@ -151,6 +153,7 @@ const empresas = [
 
       <!-- Tarjeta 3 -->
       <div
+        data-aos="fade-up"
         class="flex flex-col items-center justify-center text-center gap-4 px-4"
       >
         <img
@@ -180,7 +183,7 @@ const empresas = [
     class="bg-gradient-to-b from-[#F5F5F5] to-[#FFFFFF] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-28 px-8 md:px-16 lg:px-40 relative sm:pb-60 pb-40"
   >
     <!-- Texto -->
-    <div class="border-l-4 border-naranja pl-6 md:w-1/2">
+    <div data-aos="fade-right" class="border-l-4 border-naranja pl-6 md:w-1/2">
       <h2 class="text-grisclaro sm:text-5xl text-4xl font-medium leading-tight">
         Somos <span class="text-naranja">expertos</span><br />
         en múltiples arquitecturas
@@ -194,11 +197,16 @@ const empresas = [
     </div>
 
     <!-- Logos -->
-    <div class="mt-16 sm:mt-0">
+    <div data-aos="zoom-in" class="mt-16 sm:mt-0 relative group">
+      <div
+        class="absolute inset-0 rounded-full blur-xl bg-orange-400 opacity-0 group-hover:opacity-20 transition-all duration-300"
+      >
+      </div>
+
       <img
         src="/tecnologias.svg"
         alt="Tecnologías"
-        class="hover:scale-110 transition-transform duration-300"
+        class="relative hover:scale-110 transition-transform duration-300"
       />
     </div>
 
@@ -214,11 +222,13 @@ const empresas = [
   <!-- Sección testimonios -->
   <section class="bg-gradient-to-b from-[#FFD4B6] to-[#FFFFFF] xl:pl-0 p-10">
     <h2
+      data-aos="fade-up"
       class="text-grisclaro sm:text-5xl text-4xl font-medium text-center pt-16"
     >
       Lo que dicen <span class="text-naranja">nuestros</span> clientes
     </h2>
     <p
+      data-aos="fade-up"
       class="text-grisclaro sm:text-2xl items-center justify-center text-center text-base mt-4 max-w-4xl mx-auto"
     >
       Nos enorgullece construir relaciones duraderas basadas en confianza,
@@ -236,13 +246,13 @@ const empresas = [
       class="full-w mx-auto flex flex-col md:flex-col lg:flex-row items-center sm:gap-20 mt-20"
     >
       <!-- Imagen -->
-      <div class="md:w-[2/6] relative">
+      <div data-aos="fade-right" class="md:w-[2/6] relative">
         <Image
           src={equipo}
           alt="Equipo trabajando"
           class="sm:rounded-tr-2xl sm:rounded-br-2xl md:rounded-2xl shadow-md"
         />
-  
+
         <!-- Puntos decorativos -->
         <div
           class="absolute top-0 left-0 w-20 h-20 bg-orange-400 rounded-full -translate-x-4 -translate-y-4"
@@ -266,13 +276,20 @@ const empresas = [
         </p>
 
         <!-- Grid de empresas -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div
+          data-aos="fade-up"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"
+        >
           {
             empresas.map((empresa) => (
               <div
                 class={`bg-white shadow-md rounded-xl p-6 border hover:shadow-lg transition border-transparent"}`}
               >
-                <Image src={empresa.logo} alt={empresa.nombre} class="mx-auto" />
+                <Image
+                  src={empresa.logo}
+                  alt={empresa.nombre}
+                  class="mx-auto"
+                />
                 <p class="text-sm text-gray-600 mb-3 text-center">
                   {empresa.texto}
                 </p>
@@ -295,7 +312,7 @@ const empresas = [
       class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6"
     >
       <!-- Texto -->
-      <div class="max-w-md text-center md:text-left">
+      <div data-aos="fade-right" class="max-w-md text-center md:text-left">
         <h2 class="text-3xl md:text-3xl font-medium leading-snug mb-3">
           ¿Listo para llevar el desarrollo<br />
           de tu empresa al siguiente nivel?
@@ -304,7 +321,7 @@ const empresas = [
           Descubre cómo podemos hacerlo realidad.
         </p>
         <a
-          href="/contacto"
+          href="/contactenos.html"
           class="inline-block bg-[#2C2C2C] hover:bg-black transition-colors text-white font-semibold py-3 px-6 rounded-md"
         >
           Contáctanos
@@ -317,6 +334,7 @@ const empresas = [
       >
         <!-- Imagen principal -->
         <div
+          data-aos="zoom-in"
           class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl"
         >
           <Image
@@ -328,6 +346,7 @@ const empresas = [
 
         <!-- Imagen secundaria -->
         <div
+          data-aos="zoom-in"
           class="sm:absolute -bottom-32 -right-10 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg"
         >
           <Image
@@ -358,8 +377,13 @@ const empresas = [
           >crecer</span
         >
       </h2>
+
       <!-- formulario de contacto -->
-      <form class="space-y-4 max-w-3xl mx-auto" id="contactForm">
+      <form
+        data-aos="fade-up"
+        class="space-y-4 max-w-3xl mx-auto"
+        id="contactForm"
+      >
         <!-- Nombre -->
         <div>
           <input
@@ -433,3 +457,21 @@ const empresas = [
     </div>
   </section>
 </Layout>
+
+<style>
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-slide-up {
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+  }
+</style>
