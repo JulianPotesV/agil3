@@ -3,7 +3,6 @@ interface Props {
   title: string;
   description: string;
   images?: string[];
-  backgroundColor?: string;
   align?: 'left' | 'center';
 }
 
@@ -11,25 +10,26 @@ const {
   title, 
   description, 
   images = [],
-  backgroundColor = '',
   align = 'left'
 } = Astro.props;
 
 const alignClass = align === 'center' ? 'text-center' : 'text-left';
 ---
 
-<div class={`relative w-full ${backgroundColor} overflow-hidden pt-24 sm:pt-8 pb-16 `}>
+<div class={`relative w-full bg-gradient-to-b from-orange-300 to-naranja overflow-hidden pt-24 sm:pt-8 pb-16 `}>
   <div class="container mx-auto px-6 py-6 md:py-24">
     <div class="flex flex-col lg:flex-row md:flex-col items-center justify-between gap-8">
 
       <!-- Contenido de texto -->
       <div class={`w-full  md:w-1/1 ${alignClass}`}>
 
-        <h1 class="text-5xl md:text-6xl font-medium text-white mb-6 leading-tight">
+        <!-- Titulo -->
+        <h1 class="text-5xl lg:text-left md:text-center text-center md:text-6xl font-medium text-white mb-6 leading-tight">
           {title}
         </h1>
 
-        <p class="text-xl text-white/90 leading-relaxed max-w-xl">
+        <!-- Parrafo -->
+        <p class="md:text-xl text-lg text-white lg:text-left md:text-center text-center leading-relaxed lg:max-w-3xl">
           {description}
         </p>
 
@@ -80,4 +80,5 @@ const alignClass = align === 'center' ? 'text-center' : 'text-left';
         d="M0,96L120,128C240,160,480,224,720,218.7C960,213,1200,139,1320,101.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
       ></path>
 		</svg>
+  </div>  
 </div>

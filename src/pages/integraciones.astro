@@ -4,6 +4,10 @@ import HeaderPaginas from "../components/HeaderPaginas.astro";
 import { Image } from "astro:assets";
 
 // Imports de las rutas para usarlas en los componentes <Image>
+import img1 from "/src/assets/integraciones/integraciones-imagen-1.png";
+import img2 from "/src/assets/integraciones/integraciones-imagen-2.png";
+import img3 from "/src/assets/integraciones/integraciones-imagen-3.png";
+
 import logoSiesa from "../assets/integraciones/logo-siesa.png";
 import logoSap from "../assets/integraciones/logo-sap.png";
 import logoHubspot from "../assets/integraciones/logo-hubspot.png";
@@ -16,6 +20,9 @@ import logoDatacredito from "../assets/integraciones/logo-datacredito.png";
 import logoProtecdata from "../assets/integraciones/logo-protecdata.png";
 
 import graficasIlustracion from "../assets/integraciones/graficas-ilustracion.png";
+import logoRiopaila from "/src/assets/integraciones/logo-riopaila.png";
+import logoCosmoagro from "/src/assets/integraciones/logo-cosmoagro.png";
+
 import Boton from "../components/Boton.astro";
 ---
 
@@ -23,12 +30,7 @@ import Boton from "../components/Boton.astro";
   <HeaderPaginas
     title="Integraciones"
     description="La Integración de sistemas de software es una necesidad muy común entre las compañías, poner a interactuar entre si varios sistemas como el ERP, el CRM, la Tienda en Línea y la Telefonía, resultan de vital importancia para mejorar la productividad. En Agil3 somos expertos en realizar estas conexiones, garantizado la estabilidad en el intercambio de información entre el origen y destino de la información."
-    images={[
-      "../src/assets/integraciones/integraciones-imagen-1.png",
-      "../src/assets/integraciones/integraciones-imagen-2.png",
-      "../src/assets/integraciones/integraciones-imagen-3.png",
-    ]}
-    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    images={[img1.src, img2.src, img3.src]}
     align="left"
   />
   
@@ -48,7 +50,7 @@ import Boton from "../components/Boton.astro";
       >
         En Agil3 tenemos la capacidad de interconectar diversas fuentes de datos,
         cualquiera de estos sistemas (entre otros) pueden convertirse en origen o
-        destino de información
+        destino de información.
       </p>
 
       <!-- Cuadro con los logos de las integraciones-->
@@ -219,11 +221,7 @@ import Boton from "../components/Boton.astro";
           > 
           
             <!--Imagen logotipo-->
-            <img
-              src="../src/assets/integraciones/logo-riopaila.png"
-              alt="Logotipo Balinera S.A"
-              class="w-40"
-            />
+            <Image src={logoRiopaila} alt={"Logotipo Rio Paila"}/>
 
             <!--Parrafo-->
             <p class="text-grisclaro text-lg">
@@ -258,11 +256,7 @@ import Boton from "../components/Boton.astro";
           <div class="flex flex-col items-center lg:pl-24 lg:pr-24 md:px-16 px-4 gap-12 lg:mt-0 mt-16">
 
             <!--Imagen logotipo-->
-            <img
-              src="../src/assets/integraciones/logo-cosmoagro.png"
-              alt="Logotipo Asocaña"
-              class="w-40"
-            />
+            <Image src={logoCosmoagro} alt={"Logotipo Cosmoagro"}/>
 
             <!--Parrafo-->
             <p class="text-grisclaro text-lg">

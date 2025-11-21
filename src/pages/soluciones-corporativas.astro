@@ -3,6 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import HeaderPaginas from "../components/HeaderPaginas.astro";
 import TarjetaSoluciones from "../components/TarjetaSoluciones.astro";
 import Boton from "../components/Boton.astro";
+import { Image } from "astro:assets";
+
+import img1 from "/src/assets/soluciones-corp/soluciones-imagen-1.png"
+import img2 from "/src/assets/soluciones-corp/soluciones-imagen-2.png"
+import img3 from "/src/assets/soluciones-corp/soluciones-imagen-3.png"
+
+import logoBalinera from "/src/assets/soluciones-corp/balinera-caso.png"
+import logoAsocana from "/src/assets/soluciones-corp/asocana-caso.png"
+
 ---
 
 <Layout>
@@ -11,12 +20,7 @@ import Boton from "../components/Boton.astro";
   <HeaderPaginas
     title="Soluciones Corporativas"
     description="Somos expertos en implementación de soluciones corporativas, utilizamos la tecnología para aumentar la productividad de las empresas, optimizando sus procesos internos a través de soluciones de software personalizadas o adaptación de aplicaciones existentes."
-    images={[
-      "../src/assets/soluciones-corp/soluciones-imagen-1.png",
-      "../src/assets/soluciones-corp/soluciones-imagen-2.png",
-      "../src/assets/soluciones-corp/soluciones-imagen-3.jpg",
-    ]}
-    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    images={[img1.src, img2.src, img3.src]}
     align="left"
   />
   
@@ -93,12 +97,8 @@ import Boton from "../components/Boton.astro";
         <!--Caso 1-->
         <div
           class="flex flex-col items-center sm:border-r-2 border-naranja sm:pr-24 md:px-16 gap-12"
-        >
-          <img
-            src="../src/assets/casos-de-exito/balinera-caso.png"
-            alt="Logotipo Balinera S.A"
-            class="w-40"
-          />
+        > 
+          <Image src={logoBalinera} alt={"Lofotipo Balinera S.A"} class="w-40" />
           <p class="text-grisclaro text-lg">
             En la Balinera S.A, <strong>el portal de ventas</strong> ayudo a <strong
               >incrementar los negocios cerrados en un 60%,</strong
@@ -110,11 +110,8 @@ import Boton from "../components/Boton.astro";
 
         <!--Caso 2-->
         <div class="flex flex-col items-center sm:pl-24 md:px-16 gap-12 mt-16 lg:mt-0 md:mt-16">
-          <img
-            src="../src/assets/casos-de-exito/asocana-caso.png"
-            alt="Logotipo Asocaña"
-            class="w-40"
-          />
+
+          <Image src={logoAsocana} alt={"Lofotipo Balinera S.A"} class="w-40" />
           <p class="text-grisclaro text-lg">
             En Asocaña, creamos el <strong>sistema de liquidación </strong> de Fondo de Estabilización de
             Precios del Azúcar, una solución que permitió <strong>automatizar el proceso de cálculo 

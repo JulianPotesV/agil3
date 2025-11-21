@@ -2,9 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import HeaderPaginas from "../components/HeaderPaginas.astro";
 import { Image } from "astro:assets";
-import imagenCaracteristicas from "/public/imagenes/whatsapp-bot/caracteristicas.png";
-import imagenRobot from "/public/imagenes/whatsapp-bot/robot.png";
+import imagenCaracteristicas from "../../src/assets/whatsapp-bot/caracteristicas.png";
+import imagenRobot from "../../src/assets/whatsapp-bot/robot.png";
+import logoCosmoagro from "../../src/assets/whatsapp-bot/cosmoagro-caso.png"
 import Boton from "../components/Boton.astro";
+
+import img1 from "/src/assets/whatsapp-bot/imagen-whatsapp-bot-1.png";
+import img2 from "/src/assets/whatsapp-bot/imagen-whatsapp-bot-2.png";
+import img3 from "/src/assets/whatsapp-bot/imagen-whatsapp-bot-3.png";
+
 ---
 
 <Layout>
@@ -12,12 +18,7 @@ import Boton from "../components/Boton.astro";
   <HeaderPaginas
     title="WhatsApp Bot"
     description="Es conocido por todos que WhatsApp se convirtió en una aplicación muy importante para las compañías, ya que es una herramienta vital para la fuerza de ventas y servicio al cliente. Con nuestro Bot potencia tu fuerza de ventas, consolida de forma rápida la atención al cliente y todo solo con WhatsApp de forma automática operando las 24 horas al día."
-    images={[
-      "imagenes/whatsapp-bot/imagen-whatsapp-bot-1.png",
-      "imagenes/whatsapp-bot/imagen-whatsapp-bot-2.png",
-      "imagenes/whatsapp-bot/imagen-whatsapp-bot-3.png",
-    ]}
-    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    images={[img1.src, img2.src, img3.src]}
     align="left"
   />
 
@@ -231,11 +232,7 @@ import Boton from "../components/Boton.astro";
         <div class="flex flex-col items-center gap-12">
 
           <!-- Logo de la empresa -->
-          <img
-            src="../public/imagenes/whatsapp-bot/cosmoagro-caso.png"
-            alt="Logotipo Balinera S.A"
-            class="w-40"
-          />
+          <Image src={logoCosmoagro} alt={"Logotipo Cosmoagro"}/>
           <p class="text-grisclaro text-lg">
             En Cosmoagro S.A se integró el Bot WhatsApp con el sistema interno
             de la compañía, permitiendo gestionar clientes potenciales y

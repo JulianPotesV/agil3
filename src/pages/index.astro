@@ -8,33 +8,39 @@ import codigo from "../assets/home/codigo.png";
 import { Image } from "astro:assets";
 import heroImg from "../assets/home/imagen-hero-1.jpg";
 
+import logoCosmoagro from "../assets/home/logo-cosmoagro.png";
+import logoAsocana from "../assets/home/logo-asocana.png";
+import logoIncauca from "../assets/home/logo-incauca.png";
+import logoRioPaila from "../assets/home/logo-rio-paila.png";
+import logoVatia from "../assets/home/logo-vatia.png";
+
 const empresas = [
   {
-    logo: "/logo-cosmoagro.png",
+    logo: logoCosmoagro,
     nombre: "Cosmoagro",
     texto:
       "Lorem ipsum dolor sit amet consectetur. Auctor donec facilisis tellus magna. Posuere ullamcorper.",
   },
   {
-    logo: "/logo-asocana.png",
+    logo: logoAsocana,
     nombre: "Sector Agroindustrial de la Caña",
     texto:
       "Lorem ipsum dolor sit amet consectetur. Auctor donec facilisis tellus magna. Posuere ullamcorper.",
   },
   {
-    logo: "/logo-incauca.png",
+    logo: logoIncauca,
     nombre: "Incauca S.A.S.",
     texto:
       "Lorem ipsum dolor sit amet consectetur. Auctor donec facilisis tellus magna. Posuere ullamcorper.",
   },
   {
-    logo: "/logo-rio-paila.png",
+    logo: logoRioPaila,
     nombre: "Riopaila Castilla",
     texto:
       "Lorem ipsum dolor sit amet consectetur. Auctor donec facilisis tellus magna. Posuere ullamcorper.",
   },
   {
-    logo: "/logo-vatia.png",
+    logo: logoVatia,
     nombre: "Vatia",
     texto:
       "Lorem ipsum dolor sit amet consectetur. Auctor donec facilisis tellus magna. Posuere ullamcorper.",
@@ -266,7 +272,7 @@ const empresas = [
               <div
                 class={`bg-white shadow-md rounded-xl p-6 border hover:shadow-lg transition border-transparent"}`}
               >
-                <img src={empresa.logo} alt={empresa.nombre} class="mx-auto" />
+                <Image src={empresa.logo} alt={empresa.nombre} class="mx-auto" />
                 <p class="text-sm text-gray-600 mb-3 text-center">
                   {empresa.texto}
                 </p>

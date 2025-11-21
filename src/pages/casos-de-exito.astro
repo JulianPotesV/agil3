@@ -13,6 +13,11 @@ import logoImecol from "/src/assets/casos-de-exito-2/imecol-logo.png";
 import logoCosmoagro from "/src/assets/casos-de-exito-2/cosmoagro-logo.png";
 import logoFianza from "/src/assets/casos-de-exito-2/finanzacredito.png";
 
+import img1 from "/src/assets/casos-de-exito-2/casos-imagen-1.png";
+import img2 from "/src/assets/casos-de-exito-2/casos-imagen-2.png";
+import img3 from "/src/assets/casos-de-exito-2/casos-imagen-3.png";
+
+
 // Import del modal
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-components'
 ---
@@ -22,12 +27,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-c
   <HeaderPaginas
     title="Casos de Éxito"
     description="En Agil3 transformamos desafíos en resultados reales. Cada proyecto refleja nuestro compromiso con la innovación, la eficiencia y el crecimiento de nuestros clientes."
-    images={[
-      "../src/assets/casos-de-exito-2/casos-imagen-1.png",
-      "../src/assets/casos-de-exito-2/casos-imagen-2.png",
-      "../src/assets/casos-de-exito-2/casos-imagen-3.png",
-    ]}
-    backgroundColor="bg-gradient-to-br from-orange-300 to-naranja"
+    images={[img1.src, img2.src, img3.src]}
     align="left"
   />
 
@@ -57,6 +57,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-c
       ></path>
     </svg>
 
+    <!--Inicio seccion-->
     <div class="bg-[#F5F5F5]">
       <div
         class="grid sm:grid-cols-3 grid-cols-1 place-items-center mx-auto max-w-[75%] lg:md:gap-8 md:gap-4 gap-8 md:pt-0 pt-8"
