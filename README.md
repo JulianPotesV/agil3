@@ -116,5 +116,5 @@ Para cualquier inconveniente, no duden en contactarme
 ├── tailwind.config.cjs         # Configuración global de Tailwind
 └── tsconfig.json / jsconfig.json   # Configuración de TypeScript / JavaScript
 
-
+```
 **Gracias por confiar en mi para el desarrollo de esta web.**
