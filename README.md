@@ -93,6 +93,7 @@ Para cualquier inconveniente, no duden en contactarme
 
 ## Estructura del Proyecto
 
+```bash
 /
 ├── public/                     # Archivos estáticos accesibles públicamente
 │   ├── favicon.ico
