@@ -91,4 +91,29 @@ Para cualquier inconveniente, no duden en contactarme
 
 ------------------------------------------------------------------------
 
+## Estructura del Proyecto
+
+/
+├── public/                     # Archivos estáticos accesibles públicamente
+│   ├── favicon.ico
+│   ├── icons/
+│   └── images/
+│
+├── src/                        # Código fuente principal del proyecto
+│   ├── components/             # Componentes reutilizables (UI, módulos, widgets)
+│   ├── layouts/                # Plantillas de diseño global
+│   ├── pages/                  # Páginas del proyecto
+│   ├── scripts/                # Scrips adicionales del proyecto                 
+│   ├── styles/                 # Estilos globales y parciales (CSS / Tailwind) 
+│   └── 
+│
+├── .gitignore                  # Archivos y carpetas ignorados por Git
+├── .astro.config               # Archivo central de configuración
+├── package.json                # Dependencias y scripts del proyecto
+├── package-lock.json           # Versión exacta de dependencias
+├── README.md                   # Documentación del proyecto
+├── tailwind.config             # Configuración global, constantes, variables
+└── tsconfig.json / jsconfig.json   # Configuración del entorno
+
+
 **Gracias por confiar en mi para el desarrollo de esta web.**
