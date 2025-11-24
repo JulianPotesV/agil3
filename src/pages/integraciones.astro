@@ -22,6 +22,7 @@ import logoProtecdata from "../assets/integraciones/logo-protecdata.png";
 import graficasIlustracion from "../assets/integraciones/graficas-ilustracion.png";
 import logoRiopaila from "/src/assets/integraciones/logo-riopaila.png";
 import logoCosmoagro from "/src/assets/integraciones/logo-cosmoagro.png";
+import lineaGrafico from "/src/assets/integraciones/icono-linea.svg"
 
 import Boton from "../components/Boton.astro";
 ---
@@ -66,11 +67,7 @@ import Boton from "../components/Boton.astro";
           </h2>
 
           <!-- Linea decoracion -->
-          <img
-            src="../src/assets/integraciones/icono-linea.svg"
-            alt="Linea grafica"
-            class="h-16"
-          />
+           <Image src={lineaGrafico} alt={"Grafico decorativo"} class="h-16 flex mx-auto"/>
 
           <!-- Logos integraciones -->
           <div class="max-w-7xl mx-auto grid gap-6">
@@ -172,7 +169,7 @@ import Boton from "../components/Boton.astro";
             
             <!-- Boton mas informacion -->
             <div class="w-full flex justify-center lg:justify-start md:py-0 py-8">
-              <Boton text="Mas informacion"/>
+              <Boton text="Más información"/>
             </div>
             
           </div>

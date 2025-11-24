@@ -11,3 +11,7 @@ body {
     --gris: #333333;
     --gris-claro: #717171;
 }
+
+html, body {
+  overflow-x: hidden;
+}
